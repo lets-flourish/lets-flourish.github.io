@@ -1,7 +1,7 @@
 # lets-flourish.github.io
 Directory of independent businesses responding to the COVID-19 crisis
 
-# installation
+## installation
 
 ```
 brew install ruby
@@ -10,3 +10,12 @@ brew install ruby
 
 bundle update
 ```
+
+## run the site locally
+```
+bundle exec jekyll serve
+```
+
+## deploy
+
+Master is deployed automatically.
