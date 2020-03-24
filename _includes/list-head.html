@@ -22,19 +22,21 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image:src" content="https://images.unsplash.com/photo-1495519365602-f782748ae8d3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1977&q=80">
 
-  <!-- TODO: google analytics? -->
-  <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', '');
-  </script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-161794815-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-161794815-1');
+    </script>
+
 
   <!-- TODO: update icon imgs -->
   <link rel="shortcut icon" href="/img/flourish/favicon.png" type="image/x-icon">
   <link rel="icon" href="/img/flourish/favicon.png" type="image/x-icon">
   <!-- stuff in here that's ref'ed further down - minified so I dunno -->
-  <script src="https://sheet2site.com/assets/js/page.min.js"></script>
+  <!-- <script src="https://sheet2site.com/assets/js/page.min.js"></script> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Shuffle/5.2.1/shuffle.js"></script>
 
   <script>
@@ -212,20 +214,20 @@
   
 
   <script>
-    $(document).ready(function() {
-      $('#example').DataTable( {
-        "paging":   false,
-        "ordering": true,
-        "info":     true,
-        "autoWidth": true,
-        "info": false,
-        "searching": true,
-        "language": {
-          "search": "_INPUT_",
-          "searchPlaceholder": "Canada"
-          }
-      });
-    });
+    // $(document).ready(function() {
+    //   $('#example').DataTable( {
+    //     "paging":   false,
+    //     "ordering": true,
+    //     "info":     true,
+    //     "autoWidth": true,
+    //     "info": false,
+    //     "searching": true,
+    //     "language": {
+    //       "search": "_INPUT_",
+    //       "searchPlaceholder": "Canada"
+    //       }
+    //   });
+    // });
   </script>
 
   <script src="https://cdn.blinkloader.com/blinkloader-2.0.6.min.js"></script>

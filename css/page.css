@@ -27782,8 +27782,6 @@ body:not(.body-scrolled) .topbar.d-flex~.navbar {
 	-webkit-background-size: cover;
 	background-size: cover;
 	background-repeat: no-repeat;
-	padding-top: 146px;
-	padding-bottom: 90px
 }
 
 .header>.container,

@@ -9,7 +9,25 @@ body {
 }
 
 .header {
-  background: url('../img/market.jpg')
+  background-color: #66caa0;
+  background: url(../img/bg/market-night.jpg);
+  background-size: cover;
+}
+
+.btn-flourish {
+  background-color: #048b03;
+  color: #ffffff;
+  position: relative;
+  top: 0px;
+}
+
+.btn-flourish:hover, .btn-flourish:active {
+  color: #ffffff;
+  top: 2px;
+}
+
+a {
+  color: #048b03;
 }
 
 .collapsing {
