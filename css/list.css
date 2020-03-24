@@ -8,6 +8,10 @@ body {
   min-height: auto;
 }
 
+.text-shadow {
+  text-shadow: 1px 1px 2px black; 
+}
+
 .header {
   background-color: #66caa0;
   background: url(../img/bg/market-night.jpg);
