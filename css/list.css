@@ -1,5 +1,15 @@
+/* 
+
+flourish green: #048b03
+
+*/
+
 body {
   min-height: auto;
+}
+
+.header {
+  background: url('../img/market.jpg')
 }
 
 .collapsing {
@@ -18,10 +28,6 @@ body {
     padding: 16px 0px 16px 0px !important;
   }
 
-  .jobboardimg {
-    display: none;
-  }
-
   .navbar-brand {
     flex-direction: row-reverse;
       position: relative;
@@ -30,125 +36,29 @@ body {
 }
 
 div.dataTables_wrapper div.dataTables_filter {
-
   padding-bottom: 50px;
-    text-align: center !important;
-
-
+  text-align: center !important;
 }
 
 div.dataTables_wrapper div.dataTables_filter input {
   border-radius: 5px;
   border: 1px solid #eaeff4;
   padding: 10px;
-    width: 300px !important;
-
-  }
-
-  .footer {
-    border-style: none !important;
-  }
-
-  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-color: #8d8d8d !important;
-opacity: 1; /* Firefox */
+  width: 300px !important;
 }
 
-.by-andrey {
-  left: 0;
-  position: fixed;
-  bottom: 0px;
-  z-index: 9999;
-  background-color: #00a760;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-bottom: 21px;
-  padding-top: 5px;
-  -webkit-box-shadow: 6px -4px 63px -8px rgba(0, 0, 0, 0.75);
-  box-shadow: 6px -4px 63px -8px rgba(0, 0, 0, 0.75);
-  border-top: 1px solid lightgrey;
-  border-right: 1px solid lightgrey;
-  border-top-right-radius: 15px;
-  color: white;
+.footer {
+  border-style: none !important;
 }
 
-.by-andrey:hover {
-  color: white;
-  padding-bottom: 25px;
-  background-color: #028b51;
-  -webkit-box-shadow: 6px -4px 5px -8px black;
-  box-shadow: 6px -4px 5px -8px black;
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #8d8d8d !important;
+  opacity: 1; /* Firefox */
 }
 
-.super-button {
-  left: 1.2em;
-  position: fixed;
-  bottom: 1.2em;
-  z-index: 9999;
-    display: inline-block;
-    padding-left: 1.2em;
-  padding-right: 1.2em;
-  padding-bottom: 0.6em;
-  padding-top: 0.6em;
-  margin-top: 20px;
-    text-decoration: none;
-    text-align: center;
-    cursor: pointer;
-    -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
-    color: white;
-  }
-  .super-button::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
 
-    background: linear-gradient(135deg, #00a760, #029858);
-
-    border-radius: 4px;
-    transition: box-shadow .5s ease, -webkit-transform .2s ease;
-    transition: box-shadow .5s ease, transform .2s ease;
-    transition: box-shadow .5s ease, transform .2s ease, -webkit-transform .2s ease;
-    will-change: transform;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    -webkit-transform: translateY(var(--ty, 0)) rotateX(var(--rx, 0)) rotateY(var(--ry, 0)) translateZ(var(--tz, -12px));
-            transform: translateY(var(--ty, 0)) rotateX(var(--rx, 0)) rotateY(var(--ry, 0)) translateZ(var(--tz, -12px));
-  }
-
-  a:hover,a:focus {
-      color: white;
-  }
-
-
-  .super-button:hover::before {
-
-
-  }
-
-  .super-button:hover {
-    bottom: 1.6em;
-
-  }
-
-  .super-button::after {
-    position: relative;
-    display: inline-block;
-    content: attr(data-title);
-    transition: -webkit-transform .2s ease;
-    transition: transform .2s ease;
-    transition: transform .2s ease, -webkit-transform .2s ease;
-    font-weight: bold;
-    letter-spacing: .01em;
-    will-change: transform;
-    -webkit-transform: translateY(var(--ty, 0)) rotateX(var(--rx, 0)) rotateY(var(--ry, 0));
-            transform: translateY(var(--ty, 0)) rotateX(var(--rx, 0)) rotateY(var(--ry, 0));
-  }
-
-  .avatar {
-    min-width: 48px;
-  }
+a:hover, a:focus {
+  text-decoration: underline;
+  cursor: pointer;
+}

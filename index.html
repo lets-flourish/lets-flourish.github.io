@@ -9,49 +9,66 @@ title: The Flourish List
     <section class="section bg-gray overflow-hidden " data-shuffle="item " data-groups="London ">
       <div class="container-fluid ">
         <div class="row gap-y ">
-          <div class="col-md-5 mx-auto text-center ">
+          <div class="col-md-2"></div>
+          <div class="col-md-3 mx-auto text-center ">
             <a target="_blank " class=" " href="{{ business.link }} ">
-              <img src="{{ business.image }}" alt="... " />
+              <img src="{{ business.image }}" alt="{{ business.name }} logo" />
             </a>
           </div>
-          <div class="col-md-7 mx-auto ">
+          <div class="col-md-6 mx-auto ">
             <div>
               <h3>
-                <a style="color: #3cba92; " href="{{ business.link }} ">{{business.name}}</a>
-                <small class="text-left ">
+                <a style="color: #3cba92; " href="{{ business.link }} ">{{business.name}} &mdash;</a>
+                <small class="text-left">
                   <b>{{business.tag1}}</b>
                 </small>
               </h3>
             </div>
-            <p>
+            <!-- <p>
               {{ business.description }}
-              <!--
-              <p>About Forest Road Brewing Co.: {{ business.Description }}</p>
-              <p>How they're tackling COVID-19: {{ business.Description }}</p>
-              -->
-            </p>
+            </p> -->
 
             {% if business.takeaway_text != "n/a" %}
               <p>
-                <b>Takeaway: </b>{{ business.takeaway_text }}
+                <b>Takeaway: </b>
+                {% if business.takeaway_link != "n/a" %}
+                  <a href="{{ business.takeaway_link }}">{{ business.takeaway_text }}</a>
+                {% else %}
+                  <span>{{ business.takeaway_text }}</span>
+                {% endif %}
               </p>
             {% endif %}
 
             {% if business.delivery_text != "n/a" %}
               <p>
-                <b>Delivery: </b>{{ business.delivery_text }}
+                <b>Delivery: </b>
+                {% if business.delivery_link != "n/a" %}
+                  <a href="{{ business.delivery_link }}">{{ business.delivery_text }}</a>
+                {% else %}
+                  <span>{{ business.delivery_text }}</span>
+                {% endif %}
               </p>
             {% endif %}
 
             {% if business.online_sales_text != "n/a" %}
               <p>
-                <b>Online shop: </b>{{ business.online_sales_text }}
+                <b>Online shop: </b>
+                {% if business.online_sales_link != "n/a" %}
+                  <a href="{{ business.online_sales_link }}">{{ business.online_sales_text }}</a>
+                {% else %}
+                  <span>{{ business.online_sales_text }}</span>
+                {% endif %}
               </p>
             {% endif %}
 
-            <a class=" " target="_blank " href=" {{ business.link }} ">
-              <button class="btn px-8 " style="background-color: #3cba92; color: #ffffff; "> Learn more</button>
+            {% if business.flourish_link != "n/a" %}
+            <a class=" " target="_blank " href="{{ business.flourish_link }}">
+              <button class="btn px-8"
+                style="background-color: #3cba92; color: #ffffff;">
+                Shop on Flourish
+              </button>
             </a>
+            {% endif %}
           </div>
         </div>
       </div>
