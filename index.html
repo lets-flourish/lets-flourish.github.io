@@ -19,7 +19,7 @@ title: The Flourish List
               <h3>
                 <a style="color: #3cba92; " href="{{ business.link }} ">{{business.name}}</a>
                 <small class="text-left ">
-                  <b>Brewery - </b>
+                  <b>{{business.tag1}}</b>
                 </small>
               </h3>
             </div>
@@ -30,6 +30,25 @@ title: The Flourish List
               <p>How they're tackling COVID-19: {{ business.Description }}</p>
               -->
             </p>
+
+            {% if business.takeaway_text != "n/a" %}
+              <p>
+                <b>Takeaway: </b>{{ business.takeaway_text }}
+              </p>
+            {% endif %}
+
+            {% if business.delivery_text != "n/a" %}
+              <p>
+                <b>Delivery: </b>{{ business.delivery_text }}
+              </p>
+            {% endif %}
+
+            {% if business.online_sales_text != "n/a" %}
+              <p>
+                <b>Online shop: </b>{{ business.online_sales_text }}
+              </p>
+            {% endif %}
+
             <a class=" " target="_blank " href=" {{ business.link }} ">
               <button class="btn px-8 " style="background-color: #3cba92; color: #ffffff; "> Learn more</button>
             </a>

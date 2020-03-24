@@ -16,6 +16,8 @@ bundle update
 bundle exec jekyll serve
 ```
 
+Then go to http://localhost:4000
+
 ## deploy
 
 Master is deployed automatically.
