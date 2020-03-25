@@ -1,8 +1,7 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 {% include list-head.html %}
-
 
 <body>
 
@@ -30,11 +29,12 @@
     </div>
   </header>
 
-  <!-- the list -->
+  
   <section class="section overflow-hidden bg-gray ">
     <div class="container ">
       <h3 class="text-center">Discover deals, delivery and more</h3>
 
+      <!-- TODO: break into _includes: the list -->
       <ul class="nav nav-center nav-bold nav-uppercase nav-pills mb-2 ">
         <li class="nav-item">
           <button class="btn btn-flourish active"
@@ -111,8 +111,8 @@
   <!-- List js -->
   <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
 
+  <!-- TODO: move into script.js -->
   <script>
-
     const init = () => {
       console.log('init');
 
@@ -125,11 +125,6 @@
         itemSelector,
         layoutMode: 'vertical'
       });
-
-      // layout Isotope after each image loads
-      // $grid.imagesLoaded().progress( function() {
-      //   $grid.isotope('layout');
-      // });
 
       const initialFilter = {
         area: "[data-area]",
