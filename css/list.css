@@ -1,6 +1,7 @@
 /* 
 
 flourish green: #048b03
+shopify green: #035902
 
 */
 
@@ -11,6 +12,87 @@ body {
 .text-shadow {
   text-shadow: 1px 1px 2px black; 
 }
+
+nav.fl-nav {
+  height: 303px;
+
+  -webkit-transition: height .3s; 
+  -moz-transition: height .3s; 
+  -ms-transition: height .3s; 
+  -o-transition: height .3s; 
+  transition: height .3s; 
+}
+
+#menu-toggle {
+  padding-right: 22px;
+  color: #035902;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  fill: currentColor;
+}
+
+nav.fl-nav:not(.hidden) #menu-toggle .icon-close,
+nav.fl-nav.hidden #menu-toggle .icon-hamburger {
+  display: inline-block;
+}
+
+nav.fl-nav:not(.hidden) #menu-toggle .icon-hamburger,
+nav.fl-nav #menu-toggle .icon-close {
+  display: none;
+}
+
+nav.fl-nav.hidden {
+  height: 58px;
+}
+
+nav.fl-nav header {
+  display: flex;
+  justify-content: space-between;
+}
+
+h1.fl-nav-header {
+  color: #035902;
+  margin: 15px 0;
+  padding-left: 22px;
+  text-align: left;
+  font-size: 19px;
+}
+
+ul.fl-nav-list {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  top: 0;
+  border-top: 1px solid #ebebeb;
+}
+
+.hidden ul.fl-nav-list {
+  top: -303px;
+}
+
+li.fl-nav-item {
+  list-style: none;
+  border-bottom: 1px solid #ebebeb;
+}
+
+li.fl-nav-item a {
+  display: block;
+  width: 100%;
+  padding: 15px 30px;
+  font-size: 16px;
+}
+
+li.fl-nav-item.active a {
+  text-decoration: underline;
+}
+
 
 .header {
   background-color: #A4D792;
