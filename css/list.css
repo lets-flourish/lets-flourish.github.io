@@ -13,8 +13,8 @@ body {
 }
 
 .header {
-  background-color: #66caa0;
-  background: url(../img/bg/market-night.jpg);
+  background-color: #A4D792;
+  /* background: url(../img/bg/market-night.jpg); */
   background-size: cover;
 }
 
@@ -24,7 +24,7 @@ body {
   border: solid 1px rgba(255,255,255,0);
   position: relative;
   top: 0px;
-  margin: 2px;
+  margin: 4px;
 }
 
 .btn-flourish:hover, .btn-flourish:active {
@@ -40,6 +40,11 @@ body {
 
 a {
   color: #048b03;
+}
+
+.section {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .business-img {

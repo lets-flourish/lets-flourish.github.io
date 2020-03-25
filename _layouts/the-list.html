@@ -9,20 +9,21 @@
   <!-- header -->
   <header class="header bg-img-right text-white">
     <div class="container text-center">
-      <div class="row align-items-center py-8">
+      <div class="row align-items-center py-4">
 				<div class="col-md-3 col-xs-12"></div>
         <div class="col-md-6 col-xs-12">
-          <h1 class="display-3 text-shadow">
+          <h1 class="display-3">
             <strong>The Flourish List</strong>
           </h1>
-          <br />
-          <p class="lead-3 text-shadow">
+          <p class="lead-3">
 						A directory of businesses providing new products, delivery options and offers during the COVID-19 crisis.
 					</p>
-          <br />
-          <br />
           <p class="gap-xy">
             <a class="btn px-6 btn-flourish" href="https://letsflourish.co ">Learn more about Flourish</a>
+          </p>
+          <br />
+          <p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSePTw6SCO9HeB23fuYvb3b3oaCNBMTkIcnJBEnMTNMLVnWzUA/viewform">Submit a business to the list here</a>
           </p>
         </div>
       </div>
@@ -32,82 +33,80 @@
   <!-- the list -->
   <section class="section overflow-hidden bg-gray ">
     <div class="container ">
+      <h3 class="text-center">Discover deals, delivery and more</h3>
 
-      <div data-provide="shuffle ">
-        
-        <ul class="nav nav-center nav-bold nav-uppercase nav-pills mb-7 ">
-          <li class="nav-item">
-            <button class="btn btn-flourish active"
-              filter-by="[data-type]">
-              All
-            </button>
-          </li>
-          <li class="nav-item ">
-            <button class="btn btn-flourish"
-              filter-by="[data-type='Brewery']">
-              Brewery
-            </button>
-          </li>
-          <li class="nav-item ">
-            <button class="btn btn-flourish"
-              filter-by="[data-type='Bakery']">
-              Bakery
-            </button>
-          </li>
-          <li class="nav-item ">
-            <button class="btn btn-flourish"
-              filter-by="[data-type='Restaurant']">
-              Restaurant
-            </button>
-          </li>
-          <li class="nav-item ">
-            <button class="btn btn-flourish"
-              filter-by="[data-type='Wine']">
-              Wine
-            </button>
-          </li>
-          <li class="nav-item ">
-            <button class="btn btn-flourish"
-              filter-by="[data-type='Cafe']">
-              Cafe
-            </button>
-          </li>
-          <li class="nav-item ">
-            <button class="btn btn-flourish"
-              filter-by="[data-type='Pub']">
-              Pub
-            </button>
-          </li>
-          <br />
-        </ul>
+      <ul class="nav nav-center nav-bold nav-uppercase nav-pills mb-2 ">
+        <li class="nav-item">
+          <button class="btn btn-flourish active"
+            filter-by="[data-type]">
+            All
+          </button>
+        </li>
+        <li class="nav-item ">
+          <button class="btn btn-flourish"
+            filter-by="[data-type='Brewery']">
+            Brewery
+          </button>
+        </li>
+        <li class="nav-item ">
+          <button class="btn btn-flourish"
+            filter-by="[data-type='Bakery']">
+            Bakery
+          </button>
+        </li>
+        <li class="nav-item ">
+          <button class="btn btn-flourish"
+            filter-by="[data-type='Restaurant']">
+            Restaurant
+          </button>
+        </li>
+        <li class="nav-item ">
+          <button class="btn btn-flourish"
+            filter-by="[data-type='Wine']">
+            Wine
+          </button>
+        </li>
+        <li class="nav-item ">
+          <button class="btn btn-flourish"
+            filter-by="[data-type='Cafe']">
+            Cafe
+          </button>
+        </li>
+        <li class="nav-item ">
+          <button class="btn btn-flourish"
+            filter-by="[data-type='Pub']">
+            Pub
+          </button>
+        </li>
+        <br />
+      </ul>
 
-        <p class="text-center">
-          <select name="" id="area-filter">
-            <option value="[data-area]">All locations</option>
-            <option value="[data-area='London Fields']">London Fields</option>
-            <option value="[data-area='Dalston']">Dalston</option>
-            <option value="[data-area='Hackney Wick']">Hackney Wick</option>
-            <option value="[data-area='Clapton']">Clapton</option>
-            <option value="[data-area='Hackney']">Hackney</option>
-            <option value="[data-area='Stoke Newington']">Stoke Newington</option>
-            <option value="[data-area='Haggerston']">Haggerston</option>
-            <option value="[data-area='Bethnal Green']">Bethnal Green</option>
-            <option value="[data-area='Islington']">Islington</option>
-            <option value="[data-area='North and East London various']">North and East London (various)</option>
-            <option value="[data-area='Camberwell']">Camberwell</option>
-          </select>
-        </p>
-				<h1 class="text-center">Discover deals, delivery and more</h1>
+      <div style="height: 42px; display: flex; justify-content: center;">
+        <select name="" id="area-filter">
+          <option value="[data-area]">All locations</option>
+          <option value="[data-area='London Fields']">London Fields</option>
+          <option value="[data-area='Dalston']">Dalston</option>
+          <option value="[data-area='Hackney Wick']">Hackney Wick</option>
+          <option value="[data-area='Clapton']">Clapton</option>
+          <option value="[data-area='Hackney']">Hackney</option>
+          <option value="[data-area='Stoke Newington']">Stoke Newington</option>
+          <option value="[data-area='Haggerston']">Haggerston</option>
+          <option value="[data-area='Bethnal Green']">Bethnal Green</option>
+          <option value="[data-area='Islington']">Islington</option>
+          <option value="[data-area='North and East London various']">North and East London (various)</option>
+          <option value="[data-area='Camberwell']">Camberwell</option>
+        </select>
+      </div>
 
-        <div id="business-list" class="container">
-          {{ content }}
-        </div>
+      <div id="business-list" class="container">
+        {{ content }}
       </div>
   </section>
 
   {% include site-footer.md %}
 
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="/js/jquery.nice-select.min.js"></script>
 
   <!-- List js -->
   <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
@@ -116,6 +115,8 @@
 
     const init = () => {
       console.log('init');
+
+      $('#area-filter').niceSelect();
 
       const selector = '#business-list';
       const itemSelector = '.business';

@@ -7,8 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   
   <link rel="stylesheet" href="/css/page.css" />
-  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
+  <!-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css"> -->
   <link rel="stylesheet" type="text/css" href="/css/list.css">
+  <link rel="stylesheet" type="text/css" href="/css/nice-select.css">
+  <style>.nice-select .list { left: -55% }</style>
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
@@ -24,214 +26,17 @@
   <meta property="og:description" content="A directory of businesses providing new products, delivery options and offers during the COVID-19 crisis.">
   <meta property="og:image" content="https://thelist.letsflourish.co/img/flourish/twitter-summary-card-lg-img-v2.png">
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-161794815-1"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'UA-161794815-1');
-    </script>
-
-
-  <!-- TODO: update icon imgs -->
-  <link rel="shortcut icon" href="/img/flourish/favicon.png" type="image/x-icon">
-  <link rel="icon" href="/img/flourish/favicon.png" type="image/x-icon">
-  
-  <!-- stuff in here that's ref'ed further down - minified so I dunno -->
-  <!-- <script src="https://sheet2site.com/assets/js/page.min.js"></script> -->
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Shuffle/5.2.1/shuffle.js"></script> -->
-
-  <!-- <script>
-  //----------------------------------Filter shuffle start ----------------------------------
-      + function($) {
-          var isFiltersDeeplinkEnabled = false;
-
-          console.log("+f");
-          console.log(page)
-          page.registerVendor('Shuffle');
-          console.log("vendor registerd");
-          page.initShuffle = function() {
-              if (undefined === window['Shuffle'] || 0 === $('[data-provide="shuffle"]').length) {
-                  return;
-              }
-              console.log("smth later");
-              var Shuffle = window.Shuffle;
-
-              var simulateClick = function(elem) {
-                  // Create our event (with options)
-                  var evt = new MouseEvent('click', {
-                      bubbles: true,
-                      cancelable: true,
-                      view: window
-                  });
-                  // If cancelled, don't dispatch our event
-                  var canceled = !elem.dispatchEvent(evt);
-              };
-
-              $('[data-provide="shuffle"]').each(function() {
-                  var allButton = $('[data-shuffle="button"]:not([data-group])');
-                  var list = $(this).find('[data-shuffle="list"]');
-                  var filter = $(this).find('[data-shuffle="filter"]');
-                  var search = $(this).find('[data-shuffle="search"]');
-                  var options = {
-                      itemSelector: '[data-shuffle="item"]',
-                      sizer: '[data-shuffle="sizer"]',
-                      delimeter: ',',
-                      speed: 500,
-                  };
-                  console.log("all button opredilaetcz", allButton)
-
-                  search[0].onfocus = function() {
-                      console.log("on focus search", allButton[0])
-                      // allButton[0].addClass('active');
-                      // shuffleInstance.filter(Shuffle.ALL_ITEMS);
-                      simulateClick(allButton[0]);
-                  }
-
-                  var shuffleInstance = new Shuffle(list, options);
-
-                  $('[data-shuffle="item"] .collapse').on('shown.bs.collapse hidden.bs.collapse', function() {
-                      shuffleInstance.layout()
-                  })
-
-
-                  if (filter.length) {
-                      console.log("hello")
-                      var multi = false
-                      var filters = []
-
-
-                      var filterButtons = $(filter).find('[data-shuffle="button"]');
-                      filterButtons.each(function() {
-                          $(this).on('click', function() {
-                              console.log(this)
-                              var btn = $(this);
-                              var isActive = btn.hasClass('active');
-                              var buttonFilter = btn.data('group');
-
-                              if (isActive) {
-                                  if (buttonFilter) {
-                                      btn.removeClass('active');
-                                      if (multi) {
-                                          var filterIndex = filters.indexOf(buttonFilter);
-                                          if (filterIndex !== -1) filters.splice(filterIndex, 1);
-                                      } else {
-                                          filters = [];
-                                      }
-                                  } else {
-                                      filters = [];
-                                  }
-                              } else {
-                                  btn.addClass('active');
-                                  if (!buttonFilter) {
-                                      filters = []
-                                  } else if (multi) {
-                                      filters.push(buttonFilter);
-                                  } else {
-                                      filters = [buttonFilter];
-                                  }
-                              }
-                              if (isFiltersDeeplinkEnabled) {
-                                  if (filters.length > 0) {
-                                      addLink(filtersPrefix + filters.join(';'));
-                                  } else {
-                                      removeLink();
-                                  }
-                              }
-
-                              if (!multi || !filters.length) {
-                                  $(this)
-                                      .closest('[data-shuffle="filter"]')
-                                      .find('[data-shuffle="button"].active')
-                                      .not(btn)
-                                      .removeClass('active');
-                              }
-
-                              if (filters.length) {
-                                  allButton.removeClass('active');
-                                  shuffleInstance.filter(function(el) {
-                                      var elGroups = $(el).data('groups').split(',')
-                                          .map(function(group) {
-                                              return group.trim()
-                                          });
-                                      return filters.every(function(filter) {
-                                          return elGroups.indexOf(filter) !== -1;
-                                      });
-                                  });
-                              } else {
-                                  allButton.addClass('active');
-                                  shuffleInstance.filter(Shuffle.ALL_ITEMS);
-                              }
-                          });
-                      });
-
-                      if (isFiltersDeeplinkEnabled) {
-                          var hash = getHash(window.location.href);
-                          var filtersPrefix = "filters:";
-                          if (hash && hash.substring(0, filtersPrefix.length) === filtersPrefix) {
-                              var filtersToUse = hash.substring(filtersPrefix.length).split(";");
-                              filtersToUse.forEach(function (filterName) {
-                                  filterName = decodeURIComponent(filterName);
-                                  var btn = filterButtons.filter('[data-group="' + filterName + '"]');
-                                  if (btn && btn.length > 0) {
-                                      btn[0].click();
-                                  }
-                              });
-                          }
-                      }
-
-                  } //End if
-
-
-                  if (search.length) {
-                      console.log("search works")
-                      search.on('keyup', function() {
-                          var searchText = $(this).val().toLowerCase();
-                          shuffleInstance.filter(function(element, shuffle) {
-                              var itemText = element.textContent.toLowerCase().trim();
-                              return itemText.indexOf(searchText) !== -1;
-                          });
-                      });
-                  }
-
-
-                  $(this).imagesLoaded(function() {
-                      shuffleInstance.layout()
-                  });
-
-
-              });
-
-
-          }
-
-      }(jQuery);
-  //----------------------------------Filter shuffle end ----------------------------------    
-  </script> -->
-
-  <!-- <script src="https://cdn.jsdelivr.net/npm/lodash@4/lodash.min.js"></script> -->
-  <!-- <script src="https://sheet2site.com/assets/js/v3/common_functions.js"></script> -->
-  <!-- <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script> -->
-  
-
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-161794815-1"></script>
   <script>
-    // $(document).ready(function() {
-    //   $('#example').DataTable( {
-    //     "paging":   false,
-    //     "ordering": true,
-    //     "info":     true,
-    //     "autoWidth": true,
-    //     "info": false,
-    //     "searching": true,
-    //     "language": {
-    //       "search": "_INPUT_",
-    //       "searchPlaceholder": "Canada"
-    //       }
-    //   });
-    // });
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-161794815-1');
   </script>
 
-  <!-- <script src="https://cdn.blinkloader.com/blinkloader-2.0.6.min.js"></script> -->
+  <!-- icon imgs -->
+  <link rel="shortcut icon" href="/img/flourish/favicon.png" type="image/x-icon">
+  <link rel="icon" href="/img/flourish/favicon.png" type="image/x-icon">
 
 </head>
