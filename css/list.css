@@ -34,6 +34,10 @@ a {
   color: #048b03;
 }
 
+.business-img {
+  min-width: 140px;
+}
+
 .collapsing {
   transition: none !important;
 }

@@ -33,17 +33,62 @@
   <section class="section overflow-hidden bg-gray ">
     <div class="container ">
 
-      <!-- <div data-provide="shuffle ">
-        <ul class="nav nav-center nav-bold nav-uppercase nav-pills mb-7 " data-shuffle="filter ">
-          <li class="nav-item ">
-            <a class="nav-link active " style="cursor: pointer; " data-shuffle="button ">All</a>
+      <div data-provide="shuffle ">
+        
+        <ul class="nav nav-center nav-bold nav-uppercase nav-pills mb-7 ">
+          <li class="nav-item">
+            <button class="nav-link active"
+              onclick="filterBusinesses(event)"
+              filter-by="*">
+              All
+            </button>
           </li>
           <li class="nav-item ">
-            <a class="nav-link " data-shuffle="button " style="cursor: pointer; " data-group="Canada ">Canada (filter)</a>
+            <button class="nav-link "
+              onclick="filterBusinesses(event)"
+              filter-by=".Brewery">
+              Brewery
+            </button>
+          </li>
+          <li class="nav-item ">
+            <button class="nav-link "
+              onclick="filterBusinesses(event)"
+              filter-by=".Bakery">
+              Bakery
+            </button>
+          </li>
+          <li class="nav-item ">
+            <button class="nav-link "
+              onclick="filterBusinesses(event)"
+              filter-by=".Restaurant">
+              Restaurant
+            </button>
+          </li>
+          <li class="nav-item ">
+            <button class="nav-link "
+              onclick="filterBusinesses(event)"
+              filter-by=".Wine">
+              Wine
+            </button>
+          </li>
+          <li class="nav-item ">
+            <button class="nav-link "
+              onclick="filterBusinesses(event)"
+              filter-by=".Cafe">
+              Cafe
+            </button>
+          </li>
+          <li class="nav-item ">
+            <button class="nav-link "
+              onclick="filterBusinesses(event)"
+              filter-by=".Pub">
+              Pub
+            </button>
           </li>
           <br />
         </ul>
-        <div class="col-md-6 col-xl-4 mx-auto input-round ">
+        
+        <!-- <div class="col-md-6 col-xl-4 mx-auto input-round ">
           <div class="input-group ">
             <div class="input-group-prepend ">
               <div class="input-group-text ">🔍</div>
@@ -54,7 +99,7 @@
 				
 				<h1 class="text-center">Discover deals, delivery and more</h1>
 
-        <div data-shuffle="list ">
+        <div id="business-list" class="container">
           {{ content }}
         </div>
       </div>
@@ -62,37 +107,38 @@
 
   {% include site-footer.md %}
 
-<script type="application/javascript">
-    //Toggle hamburger menu on mobile
-    function myFunction() {
-      console.log("menu bar clicked");
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
-      document.body.classList.add("navbar-open");
+  <!-- List js -->
+  <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
 
-      var div = document.createElement("div");
+  <script>
 
-      div.setAttribute("id", "super-div");
-      div.setAttribute("class", "backdrop backdrop-navbar");
-      div.setAttribute("onclick","myFunction2();");
+    const init = () => {
+      const selector = '#business-list';
+      const itemSelector = '.business';
 
-      var navbars = document.getElementsByClassName('navbar');
-      var navbar = navbars[0];
+      var $grid = $(selector).isotope({
+        itemSelector,
+        layoutMode: 'vertical'
+      });
 
-      navbar.appendChild(div);
+      // layout Isotope after each image loads
+      // $grid.imagesLoaded().progress( function() {
+      //   $grid.isotope('layout');
+      // });
+
+      window.filterBusinesses = (ev) => {
+        const filter = ev.target.getAttribute('filter-by');
+        $grid.isotope({ filter });
+        $('.nav-link').removeClass('active');
+        $(ev.target).addClass('active');
+      }
+
     }
 
-    function myFunction2() {
-      console.log("backdrop-navbar clicked!!!");
-
-      document.body.className = document.body.className.replace("navbar-open","");
-
-      document.getElementById("super-div").outerHTML = "";
-    }
-
+    $(document).ready(init);
   </script>
 
-<script src="https://sheet2site.com/assets/js/embedded/api-client-side.min.js"></script>
-
 </body>
-
 </html>

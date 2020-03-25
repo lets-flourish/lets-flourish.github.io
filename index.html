@@ -3,22 +3,21 @@ layout: the-list
 title: The Flourish List
 ---
 
-<div class="container">
 {% for business in site.data.businesses %}
   {% if business.publish == "yes" %}
-    <section class="section bg-gray overflow-hidden " data-shuffle="item " data-groups="London ">
+    <section class="section bg-gray overflow-hidden business {{business.tag1}}">
       <div class="container-fluid ">
         <div class="row gap-y ">
           <div class="col-md-2"></div>
           <div class="col-md-3 mx-auto text-center ">
             <a target="_blank " class=" " href="{{ business.link }} ">
-              <img src="{{ business.image }}" loading="lazy" alt="{{ business.name }} logo" />
+              <img src="{{ business.image }}" class="business-img" loading="lazy" alt="{{ business.name }} logo" />
             </a>
           </div>
           <div class="col-md-6 mx-auto ">
             <div>
               <h3>
-                <a href="{{ business.link }} ">{{business.name}} &mdash;</a>
+                <a href="{{ business.link }} " class="name">{{business.name}} &mdash;</a>
                 <small class="text-left">
                   <b>{{business.tag1}}</b>
                 </small>
@@ -71,5 +70,4 @@ title: The Flourish List
     </section>
   {% endif %}
 {% endfor %}
-</div>
 
