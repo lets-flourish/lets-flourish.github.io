@@ -146,6 +146,7 @@
       
       $('.nav-item > .btn.btn-flourish').on('click', ev => {
         currentFilter.type = ev.target.getAttribute('filter-by');
+        applyFilter(currentFilter);
         $('button[filter-by]').removeClass('active');
         $(ev.target).addClass('active');
       });
