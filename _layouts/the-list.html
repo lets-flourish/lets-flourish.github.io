@@ -42,7 +42,7 @@
             All
           </button>
         </li>
-        {% assign types = site.data.businesses | map: "tag1" | uniq | compact %}
+        {% assign types = site.data.businesses | where: "publish", "yes" | map: "tag1" | uniq | compact %}
         {% for type in types %}
         <li class="nav-item ">
           <button class="btn btn-flourish"
@@ -57,7 +57,7 @@
       <div style="height: 42px; display: flex; justify-content: center;">
         <select name="" id="area-filter">
           <option value="[data-area]">All locations</option>
-          {% assign city_regions = site.data.businesses | map: "area" | uniq | compact %}
+          {% assign city_regions = site.data.businesses | where: "publish", "yes" | map: "area" | uniq | compact %}
           {% for city_region in city_regions %}
           <option value="[data-area='{{city_region}}']">{{city_region}}</option>
           {% endfor %}
