@@ -37,66 +37,66 @@
         
         <ul class="nav nav-center nav-bold nav-uppercase nav-pills mb-7 ">
           <li class="nav-item">
-            <button class="nav-link active"
-              onclick="filterBusinesses(event)"
-              filter-by="*">
+            <button class="btn btn-flourish active"
+              filter-by="[data-type]">
               All
             </button>
           </li>
           <li class="nav-item ">
-            <button class="nav-link "
-              onclick="filterBusinesses(event)"
-              filter-by=".Brewery">
+            <button class="btn btn-flourish"
+              filter-by="[data-type='Brewery']">
               Brewery
             </button>
           </li>
           <li class="nav-item ">
-            <button class="nav-link "
-              onclick="filterBusinesses(event)"
-              filter-by=".Bakery">
+            <button class="btn btn-flourish"
+              filter-by="[data-type='Bakery']">
               Bakery
             </button>
           </li>
           <li class="nav-item ">
-            <button class="nav-link "
-              onclick="filterBusinesses(event)"
-              filter-by=".Restaurant">
+            <button class="btn btn-flourish"
+              filter-by="[data-type='Restaurant']">
               Restaurant
             </button>
           </li>
           <li class="nav-item ">
-            <button class="nav-link "
-              onclick="filterBusinesses(event)"
-              filter-by=".Wine">
+            <button class="btn btn-flourish"
+              filter-by="[data-type='Wine']">
               Wine
             </button>
           </li>
           <li class="nav-item ">
-            <button class="nav-link "
-              onclick="filterBusinesses(event)"
-              filter-by=".Cafe">
+            <button class="btn btn-flourish"
+              filter-by="[data-type='Cafe']">
               Cafe
             </button>
           </li>
           <li class="nav-item ">
-            <button class="nav-link "
-              onclick="filterBusinesses(event)"
-              filter-by=".Pub">
+            <button class="btn btn-flourish"
+              filter-by="[data-type='Pub']">
               Pub
             </button>
           </li>
           <br />
         </ul>
-        
-        <!-- <div class="col-md-6 col-xl-4 mx-auto input-round ">
-          <div class="input-group ">
-            <div class="input-group-prepend ">
-              <div class="input-group-text ">🔍</div>
-            </div>
-            <input class="form-control " type="text " data-shuffle="search " placeholder="Canada " />
-          </div>
-				</div> -->
-				
+
+        <p class="text-center">
+          <select name="" id="area-filter">
+            <option value="[data-area]">All locations</option>
+            <option value="[data-area='London Fields']">London Fields</option>
+            <option value="[data-area='Dalston']">Dalston</option>
+            <option value="[data-area='Hackney Wick']">Hackney Wick</option>
+            <option value="[data-area='Clapton']">Clapton</option>
+            <option value="[data-area='Hackney']">Hackney</option>
+            <option value="[data-area='Stoke Newington']">Stoke Newington</option>
+            <option value="[data-area='Haggerston']">Haggerston</option>
+            <option value="[data-area='Bethnal Green']">Bethnal Green</option>
+            <option value="[data-area='Islington']">Islington</option>
+            <option value="[data-area='North and East London various']">North and East London (various)</option>
+            <option value="[data-area='Camberwell']">Camberwell</option>
+          </select>
+        </p>
 				<h1 class="text-center">Discover deals, delivery and more</h1>
 
         <div id="business-list" class="container">
@@ -115,6 +115,8 @@
   <script>
 
     const init = () => {
+      console.log('init');
+
       const selector = '#business-list';
       const itemSelector = '.business';
 
@@ -128,12 +130,29 @@
       //   $grid.isotope('layout');
       // });
 
-      window.filterBusinesses = (ev) => {
-        const filter = ev.target.getAttribute('filter-by');
-        $grid.isotope({ filter });
-        $('.nav-link').removeClass('active');
-        $(ev.target).addClass('active');
+      const initialFilter = {
+        area: "[data-area]",
+        type: "[data-type]"
       }
+      let currentFilter = { ...initialFilter };
+      
+      function applyFilter(f) {
+        const filter = `${f.type}${f.area}`;
+        console.log('applying: ', filter)
+        $grid.isotope({ filter });
+      }
+
+      
+      $('select#area-filter').on('change', ev => {
+        currentFilter.area = ev.target.value;
+        applyFilter(currentFilter);
+      })
+      
+      $('.nav-item > .btn.btn-flourish').on('click', ev => {
+        currentFilter.type = ev.target.getAttribute('filter-by');
+        $('button[filter-by]').removeClass('active');
+        $(ev.target).addClass('active');
+      });
 
     }
 

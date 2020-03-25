@@ -5,7 +5,7 @@ title: The Flourish List
 
 {% for business in site.data.businesses %}
   {% if business.publish == "yes" %}
-    <section class="section bg-gray overflow-hidden business {{business.tag1}}">
+    <section class="section bg-gray overflow-hidden business" data-type="{{business.tag1}}" data-area="{{business.area}}">
       <div class="container-fluid ">
         <div class="row gap-y ">
           <div class="col-md-2"></div>

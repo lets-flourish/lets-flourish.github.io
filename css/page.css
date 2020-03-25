@@ -4407,11 +4407,11 @@ input[type=button].btn-block {
 	border-radius: .125rem
 }
 
-.nav-pills .nav-link.active,
+/* .nav-pills .nav-link.active,
 .nav-pills .show>.nav-link {
 	color: #3a3a3a;
 	background-color: #e9ecf0
-}
+} */
 
 .nav-fill .nav-item {
 	-webkit-box-flex: 1;
