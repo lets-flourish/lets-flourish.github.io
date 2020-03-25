@@ -42,59 +42,25 @@
             All
           </button>
         </li>
+        {% assign types = site.data.businesses | map: "tag1" | uniq | compact %}
+        {% for type in types %}
         <li class="nav-item ">
           <button class="btn btn-flourish"
-            filter-by="[data-type='Brewery']">
-            Brewery
+            filter-by="[data-type='{{type}}']">
+            {{type}}
           </button>
         </li>
-        <li class="nav-item ">
-          <button class="btn btn-flourish"
-            filter-by="[data-type='Bakery']">
-            Bakery
-          </button>
-        </li>
-        <li class="nav-item ">
-          <button class="btn btn-flourish"
-            filter-by="[data-type='Restaurant']">
-            Restaurant
-          </button>
-        </li>
-        <li class="nav-item ">
-          <button class="btn btn-flourish"
-            filter-by="[data-type='Wine']">
-            Wine
-          </button>
-        </li>
-        <li class="nav-item ">
-          <button class="btn btn-flourish"
-            filter-by="[data-type='Cafe']">
-            Cafe
-          </button>
-        </li>
-        <li class="nav-item ">
-          <button class="btn btn-flourish"
-            filter-by="[data-type='Pub']">
-            Pub
-          </button>
-        </li>
+        {% endfor %}
         <br />
       </ul>
 
       <div style="height: 42px; display: flex; justify-content: center;">
         <select name="" id="area-filter">
           <option value="[data-area]">All locations</option>
-          <option value="[data-area='London Fields']">London Fields</option>
-          <option value="[data-area='Dalston']">Dalston</option>
-          <option value="[data-area='Hackney Wick']">Hackney Wick</option>
-          <option value="[data-area='Clapton']">Clapton</option>
-          <option value="[data-area='Hackney']">Hackney</option>
-          <option value="[data-area='Stoke Newington']">Stoke Newington</option>
-          <option value="[data-area='Haggerston']">Haggerston</option>
-          <option value="[data-area='Bethnal Green']">Bethnal Green</option>
-          <option value="[data-area='Islington']">Islington</option>
-          <option value="[data-area='North and East London various']">North and East London (various)</option>
-          <option value="[data-area='Camberwell']">Camberwell</option>
+          {% assign city_regions = site.data.businesses | map: "area" | uniq | compact %}
+          {% for city_region in city_regions %}
+          <option value="[data-area='{{city_region}}']">{{city_region}}</option>
+          {% endfor %}
         </select>
       </div>
 
