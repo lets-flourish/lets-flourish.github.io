@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import "https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Dosis:200,400,500,600";
+@import "https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|'Nunito': 'Avenir Next Rounded', 'Avenir Next',200,400,500,600";
 :root {
 	--blue: #50a1ff;
 	--indigo: #6610f2;
@@ -374,7 +374,7 @@ h6,
 .h5,
 .h6 {
 	margin-bottom: .5rem;
-	font-family: Dosis, sans-serif;
+	font-family: 'Nunito', 'Avenir Next Rounded', 'Avenir Next', sans-serif;
 	font-weight: 400;
 	line-height: 1.5;
 	color: #3a3a3a
@@ -29117,7 +29117,7 @@ a.text-lightest:focus {
 }
 
 .font-title {
-	font-family: Dosis, sans-serif
+	font-family: 'Nunito', 'Avenir Next Rounded', 'Avenir Next', sans-serif
 }
 
 .fs-6,
