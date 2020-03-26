@@ -112,6 +112,12 @@ li.fl-nav-item.active a {
   margin: 4px;
 }
 
+.btn-subscribe {
+  background-color: darkgreen;
+  color: #ffffff;
+}
+
+
 .btn-flourish:hover, .btn-flourish:active {
   color: #048b03;
   top: 2px;
@@ -121,6 +127,10 @@ li.fl-nav-item.active a {
   color: #048b03;
   background: #ffffff;
   border: solid 1px #048b03;
+}
+
+.btn-subscribe:hover, .btn-subscrive:active {
+  color: #ffffff;
 }
 
 a {
