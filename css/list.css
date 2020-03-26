@@ -101,8 +101,8 @@ li.fl-nav-item.active a {
 }
 
 .btn-flourish {
-  background-color: #048b03;
-  color: #ffffff;
+  background-color: #ffffff;
+  color: #048b03;
   border: solid 1px rgba(255,255,255,0);
   position: relative;
   top: 0px;
@@ -110,7 +110,7 @@ li.fl-nav-item.active a {
 }
 
 .btn-flourish:hover, .btn-flourish:active {
-  color: #ffffff;
+  color: #048b03;
   top: 2px;
 }
 
