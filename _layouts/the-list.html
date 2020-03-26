@@ -35,7 +35,7 @@
   </nav>
 
   <!-- header -->
-  <header class="header bg-img-right text-white">
+<!--   <header class="header bg-img-right text-white">
     <div class="container text-center">
       <div class="row align-items-center py-4">
 				<div class="col-md-3 col-xs-12"></div>
@@ -53,17 +53,14 @@
         </div>
       </div>
     </div>
-  </header>
+  </header> -->
 
   
   <section class="section bg-gray ">
     <div class="container ">
-      <!-- <h3 class="text-center">Shop local and support independent business</h3> -->
-      <!-- <p>
-        Since COVID-19 many independent businesses are turning to collection and delivery. The Flourish List puts them all in one place. Enjoy your favourite food and drink at home and do your bit to support local businesses. If you have somewhere we should include in the list, <a href="https://docs.google.com/forms/d/e/1FAIpQLSePTw6SCO9HeB23fuYvb3b3oaCNBMTkIcnJBEnMTNMLVnWzUA/viewform">submit it here</a>
-      </p> -->
+
       <p class="text-center">
-        Submit a business we may have missed <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSePTw6SCO9HeB23fuYvb3b3oaCNBMTkIcnJBEnMTNMLVnWzUA/viewform">here</a>
+        Add your business or suggest one <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSePTw6SCO9HeB23fuYvb3b3oaCNBMTkIcnJBEnMTNMLVnWzUA/viewform">here</a>
       </p>
 
       <!-- Modal HTML embedded directly into document -->
@@ -93,7 +90,7 @@
 
       <div style="height: 42px; display: flex; justify-content: center;">
         <select name="" id="area-filter">
-          <option value="[data-area]">All locations</option>
+          <option value="[data-area]">All areas</option>
           {% assign city_regions = site.data.businesses | where: "publish", "yes" | map: "city_region" | uniq | compact %}
           {% for city_region in city_regions %}
 
