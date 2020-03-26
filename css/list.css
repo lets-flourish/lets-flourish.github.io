@@ -96,6 +96,10 @@ li.fl-nav-item.active a {
   text-decoration: underline;
 }
 
+li.fl-nav-item:hover a {
+  font-weight: bolder;
+}
+
 
 .header {
   background-color: #23a145;
