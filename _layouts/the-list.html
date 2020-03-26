@@ -110,6 +110,8 @@
 
   <!-- List js -->
   <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+  <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+
 
   <!-- TODO: move into script.js -->
   <script>
@@ -121,10 +123,12 @@
       const selector = '#business-list';
       const itemSelector = '.business';
 
-      var $grid = $(selector).isotope({
-        itemSelector,
-        layoutMode: 'vertical'
-      });
+      var $grid = $(selector).imagesLoaded(function(){
+        $grid.isotope({
+                itemSelector,
+                layoutMode: 'vertical'
+              });
+      })
 
       const initialFilter = {
         area: "[data-area]",
