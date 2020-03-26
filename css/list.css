@@ -133,6 +133,11 @@ li.fl-nav-item.active a {
   color: #ffffff;
 }
 
+.modal a.close-modal {
+  top: 2.5px !important; 
+  right: 2.5px !important;
+}
+
 a {
   color: #048b03;
 }
