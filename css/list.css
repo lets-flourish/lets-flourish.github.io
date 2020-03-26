@@ -126,20 +126,11 @@ li.fl-nav-item.active a {
 }
 
 .btn-subscribe {
-  background-color: darkgreen;
-  color: #ffffff;
-}
-
-.btn-subscribe:hover, .btn-subscrive:active {
-  color: #ffffff;
-}
-
-.btn-learnmore {
   background-color: #ffffff;
   color: darkgreen;
 }
 
-.btn-learnmore:hover, .btn-learnmore:active {
+.btn-subscribe:hover, .btn-learnmore:active {
   color: darkgreen;
 }
 
