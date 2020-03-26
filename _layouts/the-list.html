@@ -66,6 +66,13 @@
       <p class="text-center">
         Submit a business we may have missed <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSePTw6SCO9HeB23fuYvb3b3oaCNBMTkIcnJBEnMTNMLVnWzUA/viewform">here</a>
       </p>
+      <!-- Modal HTML embedded directly into document -->
+      <div id="ex1" class="modal">
+        {% include mailchimp.html %}
+      </div>
+
+      <!-- Link to open the modal -->
+      <p><a href="#ex1" rel="modal:open">Open Modal</a></p>
 
       <!-- TODO: break into _includes: the list -->
       <ul class="nav nav-center nav-bold nav-uppercase nav-pills mb-2 ">
@@ -107,10 +114,12 @@
 
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="/js/jquery.nice-select.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
 
   <!-- List js -->
   <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
   <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+  
 
 
   <!-- TODO: move into script.js -->
