@@ -138,6 +138,13 @@ li.fl-nav-item:hover a {
   color: darkgreen;
 }
 
+.btn-voucher {
+  padding-left: 0px;
+}
+.btn-voucher:hover {
+  text-decoration: underline;
+}
+
 .modal a.close-modal {
   top: 2.5px !important; 
   right: 2.5px !important;

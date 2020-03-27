@@ -23,7 +23,7 @@ title: The Flourish List
               <img src="{{ business.image }}" class="business-img" loading="lazy" alt="{{ business.name }} logo" />
             </a>
           </div>
-          <div class="col-md-6 ">
+<!--           <div class="col-md-6 ">
             <div>
               <p style="margin: -5px 0;">
                 <i>{{business.area}}</i>
@@ -73,6 +73,89 @@ title: The Flourish List
             <a class=" " target="_blank " href="{{ business.flourish_link }}">
               <button class="btn px-8 btn-flourish">
                 Buy vouchers on Flourish
+              </button>
+            </a>
+            {% endif %}
+          </div> -->
+
+
+          <!-- Hamzah's Alternative -->
+          <div class="col-md-6 ">
+            <div>
+              <p style="margin: -5px 0;">
+                <i>{{business.area}} - POSTCODE</i>
+              </p>
+              <h3>
+                <a href="{{ business.link }} " class="name">{{business.name}} &mdash;</a>
+                <small class="text-left">
+                  <b>{{business.tag1}}</b>
+                </small>
+              </h3>
+              <p style="margin-top: -10px;">
+                <i class="fas fa-phone"></i>  0207 XXXXXXX
+              </p>
+            </div>
+
+            {% if business.takeaway_text != "n/a" %}
+              <p>
+                <i class="far fa-check-circle"></i> Takeaway available
+                <!-- <b>Takeaway option: </b> -->
+<!--                 {% if business.takeaway_link != "n/a" %}
+                  <a href="{{ business.takeaway_link }}">{{ business.takeaway_text }}</a>
+                {% else %}
+                  <span>{{ business.takeaway_text }}</span>
+                {% endif %} -->
+              </p>
+            {% endif %}
+
+            {% if business.delivery_text != "n/a" %}
+              <p>
+                <i class="far fa-check-circle"></i> Delivery available
+<!--                 <b>Delivery option: </b>
+                {% if business.delivery_link != "n/a" %}
+                  <a href="{{ business.delivery_link }}">{{ business.delivery_text }}</a>
+                {% else %}
+                  <span>{{ business.delivery_text }}</span>
+                {% endif %} -->
+              </p>
+            {% endif %}
+
+            {% if business.online_sales_text != "n/a" or business.flourish_link != "n/a" %}
+              <p>
+                <i class="far fa-check-circle"></i> Vouchers available &mdash;
+
+                {%if business.flourish_link !="n/a" %}
+                <a class=" " target="_blank " href="{{ business.flourish_link }}">
+                  <button class="btn btn-voucher">
+                    Buy now
+                  </button>
+                </a>
+                {%elsif business.online_sales_link !="n/a"%}
+                <a class=" " target="_blank " href="{{ business.online_sales_link }}">
+                  <button class="btn btn-voucher">
+                    Buy now
+                  </button>
+                </a>
+                {% endif %}
+<!--                 <b>Online shop: </b>
+                {% if business.online_sales_link != "n/a" %}
+                  <a href="{{ business.online_sales_link }}">{{ business.online_sales_text }}</a>
+                {% else %}
+                  <span>{{ business.online_sales_text }}</span>
+                {% endif %} -->
+              </p>
+            {% endif %}
+
+            {% if business.delivery_link != "n/a" %}
+            <a class=" " target="_blank " href="{{ business.delivery_link }}">
+              <button class="btn px-8 btn-flourish">
+                Order now
+              </button>
+            </a>
+            {% elsif business.takeaway_link != "n/a" %}
+            <a class=" " target="_blank " href="{{ business.takeaway_link }}">
+              <button class="btn px-8 btn-flourish">
+                Order now
               </button>
             </a>
             {% endif %}
