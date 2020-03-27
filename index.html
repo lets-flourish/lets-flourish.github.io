@@ -14,7 +14,7 @@ title: The Flourish List
   </section>
   {% endif %}
   {% if business.publish == "yes" %}
-    <section class="section bg-gray overflow-hidden business" data-type="{{business.tag1}}" data-area="{{business.city_region}}">
+    <section class="section bg-gray overflow-hidden business" data-type="{{business.type}}" data-area="{{business.city_region}}">
       <div class="container-fluid ">
         <div class="row gap-y ">
           <div class="col-md-2"></div>
@@ -31,7 +31,7 @@ title: The Flourish List
               <h3>
                 <a href="{{ business.link }} " class="name">{{business.name}} &mdash;</a>
                 <small class="text-left">
-                  <b>{{business.tag1}}</b>
+                  <b>{{business.type}}</b>
                 </small>
               </h3>
             </div>
@@ -58,13 +58,13 @@ title: The Flourish List
               </p>
             {% endif %}
 
-            {% if business.online_sales_text != "n/a" %}
+            {% if business.voucher_text != "n/a" %}
               <p>
                 <b>Online shop: </b>
-                {% if business.online_sales_link != "n/a" %}
-                  <a href="{{ business.online_sales_link }}">{{ business.online_sales_text }}</a>
+                {% if business.voucher_link != "n/a" %}
+                  <a href="{{ business.voucher_link }}">{{ business.voucher_text }}</a>
                 {% else %}
-                  <span>{{ business.online_sales_text }}</span>
+                  <span>{{ business.voucher_text }}</span>
                 {% endif %}
               </p>
             {% endif %}
@@ -88,12 +88,20 @@ title: The Flourish List
               <h3>
                 <a href="{{ business.link }} " class="name">{{business.name}} &mdash;</a>
                 <small class="text-left">
-                  <b>{{business.tag1}}</b>
+                  <b>{{business.type}}</b>
                 </small>
               </h3>
+              {% if business.instagram_link != "n/a" %}
               <p style="margin-top: -10px;">
-                <i class="fas fa-phone"></i>  0207 XXXXXXX
+
+                <a href="{{business.instagram_link}}"><i class="fab fa-instagram fa-2x"></i></a>
               </p>
+              {% elsif business.phone_number != "n/a" %}
+              <p style="margin-top: -10px;">
+
+                <i class="fas fa-phone fa-2x"></i> {{business.phone_number}}
+              </p>
+              {% endif %}
             </div>
 
             {% if business.takeaway_text != "n/a" %}
@@ -120,7 +128,7 @@ title: The Flourish List
               </p>
             {% endif %}
 
-            {% if business.online_sales_text != "n/a" or business.flourish_link != "n/a" %}
+            {% if business.voucher_text != "n/a" or business.flourish_link != "n/a" %}
               <p>
                 <i class="far fa-check-circle"></i> Vouchers available &mdash;
 
@@ -130,18 +138,18 @@ title: The Flourish List
                     Buy now
                   </button>
                 </a>
-                {%elsif business.online_sales_link !="n/a"%}
-                <a class=" " target="_blank " href="{{ business.online_sales_link }}">
+                {%elsif business.voucher_link !="n/a"%}
+                <a class=" " target="_blank " href="{{ business.voucher_link }}">
                   <button class="btn btn-voucher">
                     Buy now
                   </button>
                 </a>
                 {% endif %}
 <!--                 <b>Online shop: </b>
-                {% if business.online_sales_link != "n/a" %}
-                  <a href="{{ business.online_sales_link }}">{{ business.online_sales_text }}</a>
+                {% if business.voucher_link != "n/a" %}
+                  <a href="{{ business.voucher_link }}">{{ business.voucher_text }}</a>
                 {% else %}
-                  <span>{{ business.online_sales_text }}</span>
+                  <span>{{ business.voucher_text }}</span>
                 {% endif %} -->
               </p>
             {% endif %}

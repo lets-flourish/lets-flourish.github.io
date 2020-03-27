@@ -76,7 +76,7 @@
             All
           </button>
         </li>
-        {% assign types = site.data.businesses | where: "publish", "yes" | map: "tag1" | uniq | compact %}
+        {% assign types = site.data.businesses | where: "publish", "yes" | map: "type" | uniq | compact %}
         {% for type in types %}
         <li class="nav-item ">
           <button class="btn btn-flourish"
