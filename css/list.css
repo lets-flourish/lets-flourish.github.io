@@ -213,3 +213,16 @@ a:hover, a:focus {
   text-decoration: underline;
   cursor: pointer;
 }
+
+.services-list {
+  margin-bottom: 0px;
+}
+
+.offering-item {
+  padding: 5px;
+  margin-bottom: 0px;
+  margin-right: 8px;
+  background-color: #f5e5e1;
+  font-size: 80%;
+  font-weight: bolder;
+}

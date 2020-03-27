@@ -83,7 +83,7 @@ title: The Flourish List
           <div class="col-md-6 ">
             <div>
               <p style="margin: -5px 0;">
-                <i>{{business.area}} - POSTCODE</i>
+                <i>{{business.area}} - {{business.postcode}}</i>
               </p>
               <h3>
                 <a href="{{ business.link }} " class="name">{{business.name}} &mdash;</a>
@@ -91,21 +91,36 @@ title: The Flourish List
                   <b>{{business.type}}</b>
                 </small>
               </h3>
-              {% if business.instagram_link != "n/a" %}
-              <p style="margin-top: -10px;">
+<!--               {% if business.instagram_link != "n/a" %}
+              <p style="margin-top: -10px; margin-bottom:0px">
 
-                <a href="{{business.instagram_link}}"><i class="fab fa-instagram fa-2x"></i></a>
+                <a href="{{business.instagram_link}}"><i class="fab fa-instagram"></i></a>
               </p>
               {% elsif business.phone_number != "n/a" %}
               <p style="margin-top: -10px;">
 
-                <i class="fas fa-phone fa-2x"></i> {{business.phone_number}}
+                <i class="fas fa-phone"></i> {{business.phone_number}}
               </p>
+              {% endif %} -->
+              <div>
+              {% if business.regular_menu_available == "TRUE"} %}
+                {% assign regularmenu = "Regular Menu" %}
+                <span class="offering-item">{{regularmenu}}</span>
+              {% endif %}
+              {% if business.alcohol_available == "TRUE" %}
+                {% assign alcohol = "Wine/Beer"%}
+                <span class="offering-item">{{alcohol}}</span>
+              {% endif %}
+              {% if business.groceries_available == "TRUE" %}
+                {% assign groceries = "Grocery Items" %}
+                <span class="offering-item">{{groceries}}</span>
               {% endif %}
             </div>
+            </div>
+
 
             {% if business.takeaway_text != "n/a" %}
-              <p>
+              <p class="services-list">
                 <i class="far fa-check-circle"></i> Takeaway available
                 <!-- <b>Takeaway option: </b> -->
 <!--                 {% if business.takeaway_link != "n/a" %}
@@ -116,17 +131,13 @@ title: The Flourish List
               </p>
             {% endif %}
 
+
             {% if business.delivery_text != "n/a" %}
-              <p>
+              <p class="services-list">
                 <i class="far fa-check-circle"></i> Delivery available
-<!--                 <b>Delivery option: </b>
-                {% if business.delivery_link != "n/a" %}
-                  <a href="{{ business.delivery_link }}">{{ business.delivery_text }}</a>
-                {% else %}
-                  <span>{{ business.delivery_text }}</span>
-                {% endif %} -->
               </p>
             {% endif %}
+
 
             {% if business.voucher_text != "n/a" or business.flourish_link != "n/a" %}
               <p>
