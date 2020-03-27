@@ -145,6 +145,10 @@ li.fl-nav-item:hover a {
   text-decoration: underline;
 }
 
+.btn-order {
+  margin-top: 16px;
+}
+
 .modal a.close-modal {
   top: 2.5px !important; 
   right: 2.5px !important;

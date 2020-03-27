@@ -140,7 +140,7 @@ title: The Flourish List
 
 
             {% if business.voucher_text != "n/a" or business.flourish_link != "n/a" %}
-              <p>
+              <p class="services-list">
                 <i class="far fa-check-circle"></i> Vouchers available &mdash;
 
                 {%if business.flourish_link !="n/a" %}
@@ -156,25 +156,19 @@ title: The Flourish List
                   </button>
                 </a>
                 {% endif %}
-<!--                 <b>Online shop: </b>
-                {% if business.voucher_link != "n/a" %}
-                  <a href="{{ business.voucher_link }}">{{ business.voucher_text }}</a>
-                {% else %}
-                  <span>{{ business.voucher_text }}</span>
-                {% endif %} -->
               </p>
             {% endif %}
 
             {% if business.delivery_link != "n/a" %}
             <a class=" " target="_blank " href="{{ business.delivery_link }}">
-              <button class="btn px-8 btn-flourish">
-                Order now
+              <button class="btn px-8 btn-flourish btn-order">
+                Order now &rarr;
               </button>
             </a>
             {% elsif business.takeaway_link != "n/a" %}
             <a class=" " target="_blank " href="{{ business.takeaway_link }}">
-              <button class="btn px-8 btn-flourish">
-                Order now
+              <button class="btn px-8 btn-flourish btn-order">
+                Order now &rarr;
               </button>
             </a>
             {% endif %}
