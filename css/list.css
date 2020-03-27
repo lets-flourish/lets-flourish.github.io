@@ -139,7 +139,7 @@ li.fl-nav-item:hover a {
 }
 
 .btn-voucher {
-  padding-left: 0px;
+  padding: 0px;
 }
 .btn-voucher:hover {
   text-decoration: underline;
