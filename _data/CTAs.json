@@ -1,30 +1,37 @@
 [
   {
     "UIString": "order delivery", 
-    "filterBy": "delivery_available"
+    "filterBy": "delivery_available",
+    "buttonString": "delivery 🛵"
   },
   {
     "UIString": "buy vouchers", 
-    "filterBy": "voucher_available"
+    "filterBy": "voucher_available",
+    "buttonString": "vouchers 🎫"
   },
   {
     "UIString": "buy a mealkit", 
-    "filterBy": "meal_kits_available"
+    "filterBy": "meal_kits_available",
+    "buttonString": "meal kits 👨🏻‍🍳"
   },
   {
     "UIString": "buy groceries", 
-    "filterBy": "groceries_available"
+    "filterBy": "groceries_available",
+    "buttonString": "groceries 🥦"
   },
   {
     "UIString": "buy alcohol", 
-    "filterBy": "alcohol_available"
+    "filterBy": "alcohol_available",
+    "buttonString": "alcohol🍷"
   },
   {
     "UIString": "buy food for NHS workers", 
-    "filterBy": "nhs_donations_available"
+    "filterBy": "nhs_donations_available",
+    "buttonString": "NHS donations 👩🏽‍⚕️"
   },
   {
     "UIString": "buy food and drink to pickup", 
-    "filterBy": "takeaway_available"
+    "filterBy": "takeaway_available",
+    "buttonString": "takeaway 🥡"
   }
 ]

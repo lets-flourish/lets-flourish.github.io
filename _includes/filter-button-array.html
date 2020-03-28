@@ -1,0 +1,7 @@
+<div class="text-center">
+  <button class="btn btn-flourish filter active" data-filter-by="">everything 🤹🏼‍♂️</button>
+  {% for CTA in site.data.CTAs %}
+  <button class="btn btn-flourish filter"
+    data-filter-by="[data-{{CTA.filterBy}}='TRUE']">{{CTA.buttonString}}</button>
+  {% endfor %}
+</div>
