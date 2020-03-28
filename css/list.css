@@ -116,8 +116,6 @@ li.fl-nav-item:hover a {
   margin: 4px;
 }
 
-
-
 .btn-flourish:hover, .btn-flourish:active {
   color: #ffffff;
   top: 2px;
@@ -140,13 +138,35 @@ li.fl-nav-item:hover a {
 
 .btn-voucher {
   padding: 0px;
+  text-decoration: underline;
+  color: #048b03;
 }
+
 .btn-voucher:hover {
   text-decoration: underline;
 }
 
 .btn-order {
+  background-color: #ffffff;
+  color: #048b03;
+  border: solid 1px #048b03;
+  position: relative;
+  top: 0px;
+  margin: 4px;
   margin-top: 16px;
+  max-width: 50%;
+}
+
+.btn-order:hover, .btn-order:active {
+  color: #ffffff;
+  background-color: #048b03;
+  top: 2px;
+}
+
+.btn-order.active {
+  color: #048b03;
+  background: #ffffff;
+  border: solid 1px #048b03;
 }
 
 .modal a.close-modal {
@@ -238,6 +258,7 @@ a:hover, a:focus {
 
 .offering-item {
   padding: 5px;
+  padding-left: 7px;
   margin-bottom: 0px;
   margin-right: 8px;
   background-color: #f5e5e1;
