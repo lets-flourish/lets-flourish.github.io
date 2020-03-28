@@ -163,6 +163,10 @@ a {
   padding-bottom: 1rem;
 }
 
+.section.business {
+  width: 100%;
+}
+
 .business-img {
   min-width: 140px;
 }
