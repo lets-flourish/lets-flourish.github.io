@@ -185,6 +185,7 @@ a {
 
 .section.business {
   width: 100%;
+  left: 0px !important;
 }
 
 .business-img {
