@@ -177,6 +177,16 @@ a {
   color: #048b03;
 }
 
+/* 
+isotope lib adds left:15px to all the direct children of this element
+fuck knows why
+this is the hacky fix
+have a lovely day
+*/
+#business-list {
+  left: -15px;
+}
+
 .section {
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -184,7 +194,6 @@ a {
 
 .section.business {
   width: 100%;
-  left: 0px !important;
 }
 
 .business-img {
