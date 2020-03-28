@@ -14,6 +14,8 @@ const init = () => {
     });
   })
 
+  // window.$grid = $grid;
+
   const initialFilter = JSON.stringify({
     area: "[data-area]",
     // cta: "",
@@ -36,6 +38,8 @@ const init = () => {
     const filter = `${f.area}${cats}`;
     console.log('applying: ', filter)
     $grid.isotope({ filter });
+    const n = $grid.data('isotope').filteredItems.length
+    $('#business-count').text(n);
   }
 
   // city-region-select.html
@@ -82,8 +86,14 @@ const init = () => {
       currentFilter.categories[filterBy] = !currentFilter.categories[filterBy];
       $('[data-filter-by="all"]').removeClass('active');
       $(ev.target).toggleClass('active');
-      
-
+      // if they're all unselected, active the 'all' button
+      let filtersEnabled = false;
+      $('.btn.btn-flourish.filter').each(function() {
+        filtersEnabled = filtersEnabled || this.classList.contains('active')
+      })
+      if (!filtersEnabled) {
+        $('[data-filter-by="all"]').addClass('active');
+      }
     }
     
     activeFilterControl(currentFilter);
