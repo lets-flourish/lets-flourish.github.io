@@ -14,16 +14,26 @@ const init = () => {
     });
   })
 
-  const initialFilter = {
+  const initialFilter = JSON.stringify({
     area: "[data-area]",
-    type: "[data-type]",
-    cta: "",
-    category: ""
-  }
-  let currentFilter = { ...initialFilter };
+    // cta: "",
+    categories: {
+      "delivery_available": false,
+      "voucher_available": false,
+      "meal_kits_available": false,
+      "groceries_available": false,
+      "alcohol_available": false,
+      "nhs_donations_available": false,
+      "takeaway_available": false
+    }
+  })
+  let currentFilter = JSON.parse(initialFilter);
   
   function applyFilter(f) {
-    const filter = `${f.type}${f.area}${f.cta}${f.category}`;
+    const cats = Object.keys(f.categories).map(key => {
+      return f.categories[key] ? `[data-${key}='TRUE']` : '';
+    }).join('');
+    const filter = `${f.area}${cats}`;
     console.log('applying: ', filter)
     $grid.isotope({ filter });
   }
@@ -32,28 +42,28 @@ const init = () => {
   $('select#area-filter').on('change', ev => {
     currentFilter.area = ev.target.value;
     applyFilter(currentFilter);
-  })
+  });
 
   // cta-select.html
-  $('select#cta-filter').on('change', ev => {
-    currentFilter.cta = ev.target.value;
-    applyFilter(currentFilter);
-  })
-  
-  // og filter button array
-  $('.nav-item > .btn.btn-flourish').on('click', ev => {
-    currentFilter.type = ev.target.getAttribute('filter-by');
-    applyFilter(currentFilter);
-    $('button[filter-by]').removeClass('active');
-    $(ev.target).addClass('active');
-  });
+  // $('select#cta-filter').on('change', ev => {
+  //   currentFilter.cta = ev.target.value;
+  //   applyFilter(currentFilter);
+  // });
 
   // filter-button-array.html
   $('.btn.btn-flourish.filter').on('click', ev => {
-    currentFilter.category = ev.target.getAttribute('data-filter-by');
+    const filterBy = ev.target.getAttribute('data-filter-by');
+    if (filterBy === 'all') {
+      currentFilter.categories = JSON.parse(initialFilter).categories;
+      $('.btn.btn-flourish.filter').removeClass('active');
+      $(ev.target).addClass('active');
+    } else {
+      currentFilter.categories[filterBy] = !currentFilter.categories[filterBy];
+      $('[data-filter-by="all"]').removeClass('active');
+      $(ev.target).toggleClass('active');
+    }
+    
     applyFilter(currentFilter);
-    $('button[data-filter-by]').removeClass('active');
-    $(ev.target).addClass('active');
   });
 
   // nav
