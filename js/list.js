@@ -61,6 +61,14 @@ const init = () => {
       currentFilter.categories[filterBy] = !currentFilter.categories[filterBy];
       $('[data-filter-by="all"]').removeClass('active');
       $(ev.target).toggleClass('active');
+      // if they're all unselected, active the 'all' button
+      let filtersEnabled = false;
+      $('.btn.btn-flourish.filter').each(function() {
+        filtersEnabled = filtersEnabled || this.classList.contains('active')
+      })
+      if (!filtersEnabled) {
+        $('[data-filter-by="all"]').addClass('active');
+      }
     }
     
     applyFilter(currentFilter);
