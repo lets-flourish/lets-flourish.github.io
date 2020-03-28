@@ -44,6 +44,27 @@ const init = () => {
     applyFilter(currentFilter);
   });
 
+ //filter.html
+  function activeFilterControl(f) {
+    let trueFilters = [];
+    for (let filter in f.categories) {
+      let id = "#" + filter
+      if (f.categories[filter] === true) {
+        trueFilters.push(filter);
+        let id = "#" + filter;
+        console.log(id);  
+        $(id).show();
+      } else {
+        $(id).hide();
+      }
+    }
+    if (trueFilters.length) {
+      $('#stickyfilter').css("display","flex");
+    } else {
+      $('#stickyfilter').hide();
+    }
+  }
+
   // cta-select.html
   // $('select#cta-filter').on('change', ev => {
   //   currentFilter.cta = ev.target.value;
@@ -61,8 +82,11 @@ const init = () => {
       currentFilter.categories[filterBy] = !currentFilter.categories[filterBy];
       $('[data-filter-by="all"]').removeClass('active');
       $(ev.target).toggleClass('active');
+      
+
     }
     
+    activeFilterControl(currentFilter);
     applyFilter(currentFilter);
   });
 

@@ -264,3 +264,31 @@ a:hover, a:focus {
   font-size: 80%;
   font-weight: bolder;
 }
+
+#stickyfilter {
+  position: sticky;
+  display: none;
+  top: 0;
+  line-height: 42px;
+  height: 42px; 
+  justify-content: center;
+  background-color: #ffffff;
+  z-index: 5;
+}
+
+.stickyfiltericons {
+  background-color: #cfedce;
+  top:none;
+  font-size: 80%;
+  font-weight: bolder;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-left: 10px;
+  height: 70%;
+  align-items: center;
+  display: inline-flex;
+  margin-top: auto;
+  margin-bottom: auto;
+
+
+}

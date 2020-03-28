@@ -3,3 +3,12 @@
 <div style="line-height: 42px;height: 42px; display: flex; justify-content: center;">
   <p class="text-center">{% include city-region-select.html %}</p>
 </div>
+
+<div class="text-center" id="stickyfilter">
+	<span>Filtering for: &nbsp;	</span>
+  {% for CTA in site.data.CTAs %}
+  <span class="stickyfiltericons" id="{{CTA.filterBy}}">
+    {{CTA.buttonString}}
+  </span>
+  {% endfor %}
+</div>
