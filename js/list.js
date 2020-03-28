@@ -14,6 +14,8 @@ const init = () => {
     });
   })
 
+  // window.$grid = $grid;
+
   const initialFilter = JSON.stringify({
     area: "[data-area]",
     // cta: "",
@@ -36,6 +38,8 @@ const init = () => {
     const filter = `${f.area}${cats}`;
     console.log('applying: ', filter)
     $grid.isotope({ filter });
+    const n = $grid.data('isotope').filteredItems.length
+    $('#business-count').text(n);
   }
 
   // city-region-select.html
