@@ -1,0 +1,6 @@
+<select name="" id="cta-filter">
+  <option value="">see everything</option>
+  {% for CTA in site.data.CTAs %}
+  <option value="[data-{{CTA.filterBy}}='TRUE']">{{CTA.UIString}}</option>
+  {% endfor %}
+</select>

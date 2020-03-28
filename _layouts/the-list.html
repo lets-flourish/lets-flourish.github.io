@@ -5,58 +5,13 @@
 
 <body>
 
-  <nav class="fl-nav hidden">
-    <header>
-      <h1 class="fl-nav-header">THE FLOURISH LIST</h1>
-      <button id="menu-toggle" type="button" aria-controls="MobileNav" aria-expanded="true" aria-label="Menu">
-        <svg
-          aria-hidden="true"
-          focusable="false"
-          role="presentation"
-          class="icon icon-hamburger"
-          viewBox="0 0 37 40">
-          <path d="M33.5 25h-30c-1.1 0-2-.9-2-2s.9-2 2-2h30c1.1 0 2 .9 2 2s-.9 2-2 2zm0-11.5h-30c-1.1 0-2-.9-2-2s.9-2 2-2h30c1.1 0 2 .9 2 2s-.9 2-2 2zm0 23h-30c-1.1 0-2-.9-2-2s.9-2 2-2h30c1.1 0 2 .9 2 2s-.9 2-2 2z"></path>
-        </svg>
-        <svg
-          aria-hidden="true"
-          focusable="false"
-          role="presentation"
-          class="icon icon-close"
-          viewBox="0 0 40 40">
-          <path d="M23.868 20.015L39.117 4.78c1.11-1.108 1.11-2.77 0-3.877-1.109-1.108-2.773-1.108-3.882 0L19.986 16.137 4.737.904C3.628-.204 1.965-.204.856.904c-1.11 1.108-1.11 2.77 0 3.877l15.249 15.234L.855 35.248c-1.108 1.108-1.108 2.77 0 3.877.555.554 1.248.831 1.942.831s1.386-.277 1.94-.83l15.25-15.234 15.248 15.233c.555.554 1.248.831 1.941.831s1.387-.277 1.941-.83c1.11-1.109 1.11-2.77 0-3.878L23.868 20.015z" class="layer"></path>
-        </svg>
-      </button>
-    </header>
-    <ul class="fl-nav-list">
-      <li class="fl-nav-item"><a href="https://letsflourish.co">Home</a></li>
-      <li class="fl-nav-item active"><a href="https://thelist.letsflourish.co">Businesses</a></li>
-      <li class="fl-nav-item"><a href="https://letsflourish.co/pages/about">About</a></li>
-    </ul>
-  </nav>
+  {% include site-nav.html %}
 
-  <!-- header -->
-<!--   <header class="header bg-img-right text-white">
-    <div class="container text-center">
-      <div class="row align-items-center py-4">
-				<div class="col-md-3 col-xs-12"></div>
-        <div class="col-md-6 col-xs-12">
-          <h1 class="display-5">
-            <strong>Shop local, support independent businesses</strong>
-          </h1>
-          <h4 class="lead-2">
-            A list of independent food and drink businesses now offering collection, delivery or voucher options during the lockdown, updated daily
-					</h4>
-          <p class="gap-xy">
-            <a class="btn px-6 btn-flourish btn-subscribe" href="#ex1" rel="modal:open">Subscribe to stay updated</a>
-          </p>
-          <br />
-        </div>
-      </div>
-    </div>
-  </header> -->
-
+  {% comment %}
+  {% include header.html %}
+  {% endcomment %}
   
-  <section class="section bg-gray ">
+  <section class="section">
     <div class="container ">
 
       <p class="text-center">
@@ -68,36 +23,8 @@
         {% include mailchimp.html %}
       </div>
 
-      <!-- TODO: break into _includes: the list -->
-      <ul class="nav nav-center nav-bold nav-uppercase nav-pills mb-2 ">
-        <li class="nav-item">
-          <button class="btn btn-flourish active"
-            filter-by="[data-type]">
-            All
-          </button>
-        </li>
-        {% assign types = site.data.businesses | where: "publish", "yes" | map: "type" | uniq | compact %}
-        {% for type in types %}
-        <li class="nav-item ">
-          <button class="btn btn-flourish"
-            filter-by="[data-type='{{type}}']">
-            {{type}}
-          </button>
-        </li>
-        {% endfor %}
-        <br />
-      </ul>
-
-      <div style="height: 42px; display: flex; justify-content: center;">
-        <select name="" id="area-filter">
-          <option value="[data-area]">All areas</option>
-          {% assign city_regions = site.data.businesses | where: "publish", "yes" | map: "city_region" | uniq | compact %}
-          {% for city_region in city_regions %}
-
-          <option value="[data-area='{{city_region}}']">{{city_region}}</option>
-          {% endfor %}
-        </select>
-      </div>
+      <!-- filters -->
+      {% include filter.html %}
 
       <div id="business-list" class="container">
         {{ content }}
@@ -120,6 +47,7 @@
       console.log('init');
 
       $('#area-filter').niceSelect();
+      $('#cta-filter').niceSelect();
 
       const selector = '#business-list';
       const itemSelector = '.business';
@@ -133,12 +61,13 @@
 
       const initialFilter = {
         area: "[data-area]",
-        type: "[data-type]"
+        type: "[data-type]",
+        cta: "[data-cta]"
       }
       let currentFilter = { ...initialFilter };
       
       function applyFilter(f) {
-        const filter = `${f.type}${f.area}`;
+        const filter = `${f.type}${f.area}${f.cta}`;
         console.log('applying: ', filter)
         $grid.isotope({ filter });
       }
@@ -146,6 +75,11 @@
       
       $('select#area-filter').on('change', ev => {
         currentFilter.area = ev.target.value;
+        applyFilter(currentFilter);
+      })
+
+      $('select#cta-filter').on('change', ev => {
+        currentFilter.cta = ev.target.value;
         applyFilter(currentFilter);
       })
       

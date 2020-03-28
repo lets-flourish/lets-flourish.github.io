@@ -1,0 +1,18 @@
+<ul class="nav nav-center nav-bold nav-uppercase nav-pills mb-2 ">
+  <li class="nav-item">
+    <button class="btn btn-flourish active"
+      filter-by="[data-type]">
+      All
+    </button>
+  </li>
+  {% assign types = site.data.businesses | where: "publish", "yes" | map: "type" | uniq | compact %}
+  {% for type in types %}
+  <li class="nav-item ">
+    <button class="btn btn-flourish"
+      filter-by="[data-type='{{type}}']">
+      {{type}}
+    </button>
+  </li>
+  {% endfor %}
+  <br />
+</ul>

@@ -6,7 +6,7 @@ title: The Flourish List
 {% for business in site.data.businesses %}
   {% assign cmod = forloop.index0 | modulo: 5%}
   {% if  forloop.index0 == 5 %}
-  <section class="section bg-gray overflow-hidden business">
+  <section class="section overflow-hidden business">
     <div class="container-fluid ">
       <div>
       </div>
@@ -14,7 +14,13 @@ title: The Flourish List
   </section>
   {% endif %}
   {% if business.publish == "yes" %}
-    <section class="section bg-gray overflow-hidden business" data-type="{{business.type}}" data-area="{{business.city_region}}">
+    <section class="section overflow-hidden business"
+      data-type="{{business.type}}"
+      data-area="{{business.city_region}}"
+      {% for CTA in site.data.CTAs %}
+      data-{{CTA.filterBy}}="{{business[CTA.filterBy]}}"
+      {% endfor %}
+      >
       <div class="container-fluid ">
         <div class="row gap-y ">
           <div class="col-md-2"></div>
@@ -23,63 +29,7 @@ title: The Flourish List
               <img src="{{ business.image }}" class="business-img" loading="lazy" alt="{{ business.name }} logo" />
             </a>
           </div>
-<!--           <div class="col-md-6 ">
-            <div>
-              <p style="margin: -5px 0;">
-                <i>{{business.area}}</i>
-              </p>
-              <h3>
-                <a href="{{ business.link }} " class="name">{{business.name}} &mdash;</a>
-                <small class="text-left">
-                  <b>{{business.type}}</b>
-                </small>
-              </h3>
-            </div>
 
-            {% if business.takeaway_text != "n/a" %}
-              <p>
-                <b>Takeaway option: </b>
-                {% if business.takeaway_link != "n/a" %}
-                  <a href="{{ business.takeaway_link }}">{{ business.takeaway_text }}</a>
-                {% else %}
-                  <span>{{ business.takeaway_text }}</span>
-                {% endif %}
-              </p>
-            {% endif %}
-
-            {% if business.delivery_text != "n/a" %}
-              <p>
-                <b>Delivery option: </b>
-                {% if business.delivery_link != "n/a" %}
-                  <a href="{{ business.delivery_link }}">{{ business.delivery_text }}</a>
-                {% else %}
-                  <span>{{ business.delivery_text }}</span>
-                {% endif %}
-              </p>
-            {% endif %}
-
-            {% if business.voucher_text != "n/a" %}
-              <p>
-                <b>Online shop: </b>
-                {% if business.voucher_link != "n/a" %}
-                  <a href="{{ business.voucher_link }}">{{ business.voucher_text }}</a>
-                {% else %}
-                  <span>{{ business.voucher_text }}</span>
-                {% endif %}
-              </p>
-            {% endif %}
-
-            {% if business.flourish_link != "n/a" %}
-            <a class=" " target="_blank " href="{{ business.flourish_link }}">
-              <button class="btn px-8 btn-flourish">
-                Buy vouchers on Flourish
-              </button>
-            </a>
-            {% endif %}
-          </div> -->
-
-
-          <!-- Hamzah's Alternative -->
           <div class="col-md-6 ">
             <div>
               <p style="margin: -5px 0;">
@@ -91,17 +41,7 @@ title: The Flourish List
                   <b>{{business.type}}</b>
                 </small>
               </h3>
-<!--               {% if business.instagram_link != "n/a" %}
-              <p style="margin-top: -10px; margin-bottom:0px">
 
-                <a href="{{business.instagram_link}}"><i class="fab fa-instagram"></i></a>
-              </p>
-              {% elsif business.phone_number != "n/a" %}
-              <p style="margin-top: -10px;">
-
-                <i class="fas fa-phone"></i> {{business.phone_number}}
-              </p>
-              {% endif %} -->
               <div style="margin-bottom: 8px;">
               {% if business.regular_menu_available == "TRUE"} %}
                 {% assign regularmenu = "Regular Menu" %}
@@ -122,12 +62,6 @@ title: The Flourish List
             {% if business.takeaway_text != "n/a" %}
               <p class="services-list">
                 <i class="far fa-check-circle" style="color:#048b03;"></i> Takeaway available
-                <!-- <b>Takeaway option: </b> -->
-<!--                 {% if business.takeaway_link != "n/a" %}
-                  <a href="{{ business.takeaway_link }}">{{ business.takeaway_text }}</a>
-                {% else %}
-                  <span>{{ business.takeaway_text }}</span>
-                {% endif %} -->
               </p>
             {% endif %}
 

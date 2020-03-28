@@ -1,0 +1,30 @@
+[
+  {
+    "UIString": "order delivery", 
+    "filterBy": "delivery_available"
+  },
+  {
+    "UIString": "buy vouchers", 
+    "filterBy": "voucher_available"
+  },
+  {
+    "UIString": "buy a mealkit", 
+    "filterBy": "meal_kits_available"
+  },
+  {
+    "UIString": "buy groceries", 
+    "filterBy": "groceries_available"
+  },
+  {
+    "UIString": "buy alcohol", 
+    "filterBy": "alcohol_available"
+  },
+  {
+    "UIString": "buy food for NHS workers", 
+    "filterBy": "nhs_donations_available"
+  },
+  {
+    "UIString": "buy food and drink to pickup", 
+    "filterBy": "takeaway_available"
+  }
+]
