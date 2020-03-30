@@ -1,9 +1,10 @@
-<form action="#" id="postcodeQuery" class="text-center" style="display: none; padding: 15px">
-  <div class="form-group">
+<form action="#" id="postcodeQuery" class="form-inline" style="display: none; padding: 15px">
+  <div class="form-group mx-auto">
     <input id="query" class="form-control" name="postcode" type="text" placeholder="What's your postcode friend?" />
-  </div>
-  <div id="spinner" style="display: none;">🧙🏾‍♀️ Rummaging around, just one sec...</div>
-  <div id="searchError" class="alert alert-danger" style="display: none">
-    <b>🤷🏼‍♂️ Aww snap:&nbsp;</b><span id="errorMessage">something went wrong</span>
+    <button type="submit" class="btn btn-flourish">Go go go</button>
   </div>
 </form>
+<div id="spinner" style="display: none;">🧙🏾‍♀️ Rummaging around, just one sec...</div>
+<div id="searchError" class="alert alert-danger" style="display: none">
+  <b>🤷🏼‍♂️ Aww snap:&nbsp;</b><span id="errorMessage">something went wrong</span>
+</div>
