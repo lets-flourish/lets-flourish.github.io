@@ -2,7 +2,7 @@
   <option value="[data-area]">London</option>
   {% assign city_regions = site.data.businesses | where: "publish", "yes" | map: "city_region" | uniq | compact %}
   {% for city_region in city_regions %}
-
   <option value="[data-area='{{city_region}}']">{{city_region}}</option>
   {% endfor %}
+  <option value="postcode">My postcode</option>
 </select>

@@ -2,10 +2,12 @@
 
 <div style="line-height: 42px;height: 42px; display: flex; justify-content: center;">
   <p class="text-center">
-    <p>Showing <b id="business-count">{{site.data.businesses | where: "publish", "yes" | size}}</b> businesses in&nbsp;</p>
+    <p>Showing <b id="business-count">{{site.data.businesses | where: "publish", "yes" | size}}</b> businesses around&nbsp;</p>
     {% include city-region-select.html %}
   </p>
 </div>
+
+{% include postcode-search.html %}
 
 <div class="text-center" id="stickyfilter">
 	<span>Filters:</span>

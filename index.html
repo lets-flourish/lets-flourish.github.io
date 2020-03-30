@@ -14,7 +14,7 @@ title: The Flourish List
   </section>
   {% endif %}
   {% if business.publish == "yes" %}
-    <section class="section overflow-hidden business"
+    <section id=id{{business.id}} class="section overflow-hidden business"
       data-type="{{business.type}}"
       data-area="{{business.city_region}}"
       {% for CTA in site.data.CTAs %}
@@ -34,9 +34,6 @@ title: The Flourish List
             <div>
               <h3>
                 <a href="{{ business.link }} " class="name">{{business.name}}</a>
-<!--                 <small class="text-left">
-                  <b>{{business.type}}</b>
-                </small> -->
               </h3>
               <p style="margin-top: -14px;">
                 {% assign postcode_split = business.postcode | split:" " %}
