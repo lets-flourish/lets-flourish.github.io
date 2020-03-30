@@ -14,7 +14,7 @@ title: The Flourish List
   </section>
   {% endif %}
   {% if business.publish == "yes" %}
-    <section class="section overflow-hidden business"
+    <section id=id{{business.id}} class="section overflow-hidden business"
       data-type="{{business.type}}"
       data-area="{{business.city_region}}"
       {% for CTA in site.data.CTAs %}

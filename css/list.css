@@ -177,6 +177,11 @@ a {
   color: #048b03;
 }
 
+/* postcode filter stuff */
+#query {
+   max-width: 320px;
+   margin: 0 auto;
+ }
 /* 
 isotope lib adds left:15px to all the direct children of this element
 fuck knows why
@@ -211,30 +216,6 @@ have a lovely day
   margin-top: -10px;
 }
 
-@media only screen and (max-width: 479px) {
-  .accordion .card-title a {
-    padding: 16px 0px 16px 0px !important;
-  }
-
-  .navbar-brand {
-    flex-direction: row-reverse;
-      position: relative;
-    right: -1.2rem;
-  }
-}
-
-div.dataTables_wrapper div.dataTables_filter {
-  padding-bottom: 50px;
-  text-align: center !important;
-}
-
-div.dataTables_wrapper div.dataTables_filter input {
-  border-radius: 5px;
-  border: 1px solid #eaeff4;
-  padding: 10px;
-  width: 300px !important;
-}
-
 .footer {
   border-style: none !important;
 }
@@ -267,6 +248,8 @@ a:hover, a:focus {
 
 #stickyfilter {
   position: sticky;
+  max-width: 100%;
+  overflow-x: scroll;
   display: none;
   top: 0;
   line-height: 42px;
@@ -278,7 +261,6 @@ a:hover, a:focus {
 
 .stickyfiltericons {
   background-color: #cfedce;
-  top:none;
   font-size: 80%;
   font-weight: bolder;
   padding-left: 5px;
@@ -289,6 +271,5 @@ a:hover, a:focus {
   display: inline-flex;
   margin-top: auto;
   margin-bottom: auto;
-
-
+  white-space: nowrap;
 }
