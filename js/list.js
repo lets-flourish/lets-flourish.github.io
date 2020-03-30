@@ -14,8 +14,6 @@ const init = () => {
     });
   })
 
-  // window.$grid = $grid;
-
   const initialFilter = JSON.stringify({
     area: "[data-area]",
     // cta: "",
@@ -48,7 +46,7 @@ const init = () => {
     applyFilter(currentFilter);
   });
 
- //filter.html
+ // filter.html
   function activeFilterControl(f) {
     let trueFilters = [];
     for (let filter in f.categories) {

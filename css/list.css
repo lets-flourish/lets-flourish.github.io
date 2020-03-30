@@ -267,6 +267,8 @@ a:hover, a:focus {
 
 #stickyfilter {
   position: sticky;
+  max-width: 100%;
+  overflow-x: scroll;
   display: none;
   top: 0;
   line-height: 42px;
@@ -278,7 +280,6 @@ a:hover, a:focus {
 
 .stickyfiltericons {
   background-color: #cfedce;
-  top:none;
   font-size: 80%;
   font-weight: bolder;
   padding-left: 5px;
@@ -289,6 +290,5 @@ a:hover, a:focus {
   display: inline-flex;
   margin-top: auto;
   margin-bottom: auto;
-
-
+  white-space: nowrap;
 }
