@@ -1,8 +1,7 @@
 const init = () => {
   console.log('init');
 
-  // 😏 yep...
-  const API_KEY = 'stinky-stinky-butt-butt';
+  const API_KEY = 'etiCjOTVIG3Qn5gesvVRT9I0W70snRNV59Xqkacw';
 
   $('#area-filter').niceSelect();
   $('#cta-filter').niceSelect();
