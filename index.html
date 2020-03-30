@@ -33,7 +33,7 @@ title: The Flourish List
           <div class="col-md-6 ">
             <div>
               <h3>
-                <a href="{{ business.link }} " class="name">{{business.name}}</a>
+                <a href="{{ business.link }} " class="name"" >{{business.name}}</a>
 <!--                 <small class="text-left">
                   <b>{{business.type}}</b>
                 </small> -->
@@ -88,13 +88,13 @@ title: The Flourish List
                 <i class="far fa-check-circle" style="color:#048b03;"></i> Vouchers available &mdash;
 
                 {%if business.flourish_link !="n/a" %}
-                <a class=" " target="_blank " href="{{ business.flourish_link }}">
+                <a target="_blank " href="{{ business.flourish_link }}">
                   <button class="btn btn-voucher">
                     Buy 
                   </button>
                 </a>
                 {%elsif business.voucher_link !="n/a"%}
-                <a class=" " target="_blank " href="{{ business.voucher_link }}">
+                <a target="_blank " href="{{ business.voucher_link }}">
                   <button class="btn btn-voucher">
                     Buy now
                   </button>
@@ -104,7 +104,7 @@ title: The Flourish List
             {% endif %}
 
             {% if business.delivery_link != "n/a" %}
-            <a class=" " target="_blank " href="{{ business.delivery_link }}">
+            <a target="_blank " href="{{ business.delivery_link }}">
               <button class="btn px-8 btn-order">
                 Order &rarr;
               </button>
