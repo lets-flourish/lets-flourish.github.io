@@ -1,6 +1,8 @@
 const init = () => {
   console.log('init');
 
+  const API_KEY = 'etiCjOTVIG3Qn5gesvVRT9I0W70snRNV59Xqkacw';
+
   $('#area-filter').niceSelect();
   $('#cta-filter').niceSelect();
 
@@ -43,7 +45,7 @@ const init = () => {
     console.log('applying css selector: ', filter);
     $grid.isotope({ filter });
     const n = $grid.data('isotope').filteredItems.length
-    $('#business-count').text(n);
+    $('.business-count').text(n);
   }
 
   // city-region-select.html
@@ -58,6 +60,8 @@ const init = () => {
     currentFilter.postcodes = [];
     applyFilter(currentFilter);
     $('#query')[0].value = "";
+    $('#postcode-query-copy').hide();
+    $('#button-filters-copy').show();
   });
 
  // filter.html
@@ -114,16 +118,21 @@ const init = () => {
   // postcode-search.html
   $('#postcodeQuery').submit(ev => {
     ev.preventDefault();
-    $('#spinner').show();
-    $('#searchError').hide();
     const postcode = $('#query')[0].value;
     const radius = 1.5 // km
+    if (postcode.length === 0) return;
+    $('#spinner').show();
+    $('#searchError').hide();
     console.log({postcode, radius})
     // const baseURL = 'http://localhost:5000/fake.json'
     const baseURL = 'https://wwn4ibhc05.execute-api.eu-west-2.amazonaws.com/prod/v1/places';
     const submitURL = 'https://docs.google.com/forms/u/2/d/e/1FAIpQLSePTw6SCO9HeB23fuYvb3b3oaCNBMTkIcnJBEnMTNMLVnWzUA/viewform';
     const url = `${baseURL}?postcode=${postcode}&radius=${radius}`
-    $.ajax(url)
+    $.ajax(url, {
+      headers: {
+        'X-Api-Key': API_KEY
+      }
+    })
       .done((data, status) => {
         console.log({data, status});
         if (data.results.length === 0) {
@@ -145,6 +154,9 @@ const init = () => {
         $('#searchError').show();
       })
       .always(() => {
+        $('#postcode-query-copy').show();
+        $('#button-filters-copy').hide();
+        $('.radius').text(`${radius}km`);
         $('#spinner').hide();
       })
   })
