@@ -45,7 +45,7 @@ const init = () => {
     console.log('applying css selector: ', filter);
     $grid.isotope({ filter });
     const n = $grid.data('isotope').filteredItems.length
-    $('#business-count').text(n);
+    $('.business-count').text(n);
   }
 
   // city-region-select.html
@@ -60,6 +60,8 @@ const init = () => {
     currentFilter.postcodes = [];
     applyFilter(currentFilter);
     $('#query')[0].value = "";
+    $('#postcode-query-copy').hide();
+    $('#button-filters-copy').show();
   });
 
  // filter.html
@@ -152,6 +154,9 @@ const init = () => {
         $('#searchError').show();
       })
       .always(() => {
+        $('#postcode-query-copy').show();
+        $('#button-filters-copy').hide();
+        $('.radius').text(`${radius}km`);
         $('#spinner').hide();
       })
   })

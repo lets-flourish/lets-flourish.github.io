@@ -2,7 +2,12 @@
 
 <div style="line-height: 42px;height: 42px; display: flex; justify-content: center;">
   <p class="text-center">
-    <p>Showing <b id="business-count">{{site.data.businesses | where: "publish", "yes" | size}}</b> businesses around&nbsp;</p>
+    <p id="postcode-query-copy" class="hidden">
+      Showing <b class="business-count"></b> businesses within <b class="radius"></b> of&nbsp;
+    </p>
+    <p id="button-filters-copy">
+      Showing <b class="business-count">{{site.data.businesses | where: "publish", "yes" | size}}</b> businesses around&nbsp;
+    </p>
     {% include city-region-select.html %}
   </p>
 </div>
