@@ -17,26 +17,29 @@ title: The Flourish List
     <section id=id{{business.id}} class="section overflow-hidden business"
       data-type="{{business.type}}"
       data-area="{{business.city_region}}"
-      {% for CTA in site.data.CTAs %}
-      data-{{CTA.filterBy}}="{{business[CTA.filterBy]}}"
-      {% endfor %}
+      {% for CTA in site.data.CTAs %}data-{{CTA.filterBy}}="{{business[CTA.filterBy]}}" {% endfor %}
       >
       <div class="container-fluid ">
         <div class="row gap-y ">
           <div class="col-md-2"></div>
           <div class="col-md-3 text-center ">
             <a target="_blank " class=" " href="{{ business.link }} ">
-              <img data-src="{{ business.image }}" class="business-img lazyload" loading="lazy" alt="{{ business.name }} logo" />
+              <img 
+                {% if forloop.index0 < 2 %}
+                  src="{{ business.image }}"
+                {% else %}
+                  data-src="{{ business.image }}"
+                  loading="lazy"
+                {% endif %}
+                class="business-img lazyload"
+                alt="{{ business.name }} logo" />
             </a>
           </div>
 
           <div class="col-md-6 ">
             <div>
               <h3>
-                <a href="{{ business.link }} " class="name"" >{{business.name}}</a>
-<!--                 <small class="text-left">
-                  <b>{{business.type}}</b>
-                </small> -->
+                <a href="{{ business.link }} " class="name" >{{business.name}}</a>
               </h3>
               <p style="margin-top: -14px;">
                 {% assign postcode_split = business.postcode | split:" " %}
