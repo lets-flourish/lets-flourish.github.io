@@ -33,7 +33,10 @@ title: The Flourish List
           <div class="col-md-6 ">
             <div>
               <h3>
-                <a href="{{ business.link }} " class="name">{{business.name}}</a>
+                <a href="{{ business.link }} " class="name"" >{{business.name}}</a>
+<!--                 <small class="text-left">
+                  <b>{{business.type}}</b>
+                </small> -->
               </h3>
               <p style="margin-top: -14px;">
                 {% assign postcode_split = business.postcode | split:" " %}
@@ -66,32 +69,41 @@ title: The Flourish List
             </div>
 
 
-            {% if business.takeaway_text != "n/a" %}
+            {% if business.takeaway_link != "n/a" %}
               <p class="services-list">
                 <i class="far fa-check-circle" style="color:#048b03;"></i> Takeaway available
               </p>
             {% endif %}
 
 
-            {% if business.delivery_text != "n/a" %}
+            {% if business.delivery_link != "n/a" %}
               <p class="services-list">
                 <i class="far fa-check-circle" style="color:#048b03;"></i> Delivery available
               </p>
             {% endif %}
 
 
-            {% if business.voucher_text != "n/a" or business.flourish_link != "n/a" %}
+            {% if business.nhs_donations_available == "TRUE" %}
+            <p class="services-list">
+              <i class="far fa-check-circle" style="color:#005EB8;"></i> NHS Donations &mdash;
+              <a target="_blank " href="{{ business.nhs_donations_link }}">
+                <button class="btn btn-voucher" style="color:#005EB8">
+                  Donate now
+                </button>
+              </a>
+            </p>
+            {% elsif business.voucher_text != "n/a" or business.flourish_link != "n/a" %}
               <p class="services-list">
                 <i class="far fa-check-circle" style="color:#048b03;"></i> Vouchers available &mdash;
 
                 {%if business.flourish_link !="n/a" %}
-                <a class=" " target="_blank " href="{{ business.flourish_link }}">
+                <a target="_blank " href="{{ business.flourish_link }}">
                   <button class="btn btn-voucher">
-                    Buy 
+                    Buy now
                   </button>
                 </a>
                 {%elsif business.voucher_link !="n/a"%}
-                <a class=" " target="_blank " href="{{ business.voucher_link }}">
+                <a target="_blank " href="{{ business.voucher_link }}">
                   <button class="btn btn-voucher">
                     Buy now
                   </button>
@@ -101,7 +113,7 @@ title: The Flourish List
             {% endif %}
 
             {% if business.delivery_link != "n/a" %}
-            <a class=" " target="_blank " href="{{ business.delivery_link }}">
+            <a target="_blank " href="{{ business.delivery_link }}">
               <button class="btn px-8 btn-order">
                 Order &rarr;
               </button>
