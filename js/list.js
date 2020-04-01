@@ -8,13 +8,14 @@ const init = () => {
 
   const selector = '#business-list';
   const itemSelector = '.business';
+  const $grid = $(selector);
 
-  var $grid = $(selector).imagesLoaded(function(){
+  $('.lazyload').on('lazyloaded', () => {
     $grid.isotope({
       itemSelector,
       layoutMode: 'vertical'
     });
-  })
+  });
 
   const initialFilter = JSON.stringify({
     area: "[data-area]",
