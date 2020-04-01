@@ -89,10 +89,8 @@ title: The Flourish List
             {% if business.nhs_donations_available == "TRUE" %}
             <p class="services-list">
               <i class="far fa-check-circle" style="color:#005EB8;"></i> NHS Donations &mdash;
-              <a target="_blank " href="{{ business.nhs_donations_link }}">
-                <button class="btn btn-voucher" style="color:#005EB8">
-                  Donate now
-                </button>
+              <a target="_blank " href="{{ business.nhs_donations_link }}" style="color:#005EB8">
+                Donate now
               </a>
             </p>
             {% elsif business.voucher_text != "n/a" or business.flourish_link != "n/a" %}
@@ -101,15 +99,11 @@ title: The Flourish List
 
                 {%if business.flourish_link !="n/a" %}
                 <a target="_blank " href="{{ business.flourish_link }}">
-                  <button class="btn btn-voucher">
-                    Buy now
-                  </button>
+                  Buy now
                 </a>
                 {%elsif business.voucher_link !="n/a"%}
                 <a target="_blank " href="{{ business.voucher_link }}">
-                  <button class="btn btn-voucher">
-                    Buy now
-                  </button>
+                  Buy now
                 </a>
                 {% endif %}
               </p>

@@ -27,7 +27,9 @@
       </div>
 
       <!-- filters -->
-      {% include filter.html %}
+      <div class="filter-container">
+        {% include filter.html %}
+      </div>
 
       <div id="business-list" class="container">
         {{ content }}
@@ -36,14 +38,11 @@
 
   {% include site-footer.md %}
 
-  <script src="/js/lazysizes.min.js" async></script>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-  <script src="/js/jquery.nice-select.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
-
-  <!-- List js -->
+  <script src="/js/lazysizes.min.js" async></script>
+  <script src="/js/jquery.nice-select.min.js" async></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js" async></script>
   <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
-
   <script src="js/list.js"></script>
 
 </body>

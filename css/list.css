@@ -2,11 +2,68 @@
 
 flourish green: #048b03
 shopify green: #035902
-
+blue: #005EB8
 */
+
+.text-white {
+  color: rgba(255, 255, 255, .85)!important;
+}
+
+/* 21688 */
+
+.btn {
+  font-size: 11px;
+  padding: 8px 26px 6px;
+  letter-spacing: 1.7px;
+  text-transform: uppercase;
+  border-radius: 2px;
+  outline: none;
+  -webkit-transition: .15s linear;
+  transition: .15s linear;
+}
+
+/* 25992 */
+.row.gap-y {
+  margin-top: -15px;
+  margin-bottom: -15px;
+}
+
+/* 27798 */
+.section {
+  position: relative;
+  border-bottom: none;
+  background-position: center center;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+}
+/* 7798 */
+.overflow-hidden {
+  overflow: hidden!important;
+}
+
+/* 601 */
+.container-fluid {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* 27812 */
+.section>.container, .section>.container-fluid, .section>.container-wide {
+  position: relative;
+  height: 100%;
+}
+
+/* end page.css shit */
 
 body {
   min-height: auto;
+  font-family: 'Nunito', 'Avenir Next Rounded', 'Avenir Next', sans-serif;
 }
 
 .text-shadow {
@@ -103,7 +160,6 @@ li.fl-nav-item:hover a {
 
 .header {
   background-color: #23a145;
-  /* background: url(../img/bg/market-night.jpg); */
   background-size: cover;
 }
 
@@ -136,14 +192,16 @@ li.fl-nav-item:hover a {
   color: darkgreen;
 }
 
-.btn-voucher {
-  padding: 0px;
-  text-decoration: underline;
-  color: #048b03;
-}
 
-.btn-voucher:hover {
-  text-decoration: underline;
+.btn {
+  font-size: 11px;
+  padding: 8px 26px 6px;
+  letter-spacing: 1.7px;
+  text-transform: uppercase;
+  border-radius: 2px;
+  outline: none;
+  -webkit-transition: .15s linear;
+  transition: .15s linear;
 }
 
 .btn-order {
@@ -173,8 +231,12 @@ li.fl-nav-item:hover a {
   right: 2.5px !important;
 }
 
-a {
-  color: #048b03;
+.text-white > a {
+  color: rgba(255, 255, 255, .85)!important;
+}
+
+.filter-container {
+  margin-bottom: 15px;
 }
 
 /* postcode filter stuff */
@@ -198,11 +260,14 @@ have a lovely day
 }
 
 .section.business {
+  margin: 15px 0;
   width: 100%;
 }
 
 .business-img {
   min-width: 140px;
+  max-width: 100%;
+  height: auto;
 }
 
 .collapsing {
@@ -226,8 +291,12 @@ have a lovely day
   opacity: 1; /* Firefox */
 }
 
+a {
+  color: #048b03;
+}
 
 a:hover, a:focus {
+  color: #048b03;
   text-decoration: underline;
   cursor: pointer;
 }
