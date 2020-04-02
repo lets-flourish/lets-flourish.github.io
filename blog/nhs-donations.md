@@ -26,7 +26,7 @@ layout: blog
 				<div>
 					<h4>1. Mildreds</h4>
 					<p>
-						Mildreds has a special place in the heart of many London diners as one of the first places offering a fully vegan dining experience that lived up to our expectations of what restaurant quality food should be. Now after more than 30 years of feeding the capital’s veggies (and their open-minded carnivorous friends) they’re retooling for a different challenge.  
+						Mildreds has a special place in the heart of Londoners as one of the first places offering a fully vegan dining experience that lived up to our expectations of what restaurant quality food should be. Now after more than 30 years of feeding the capital’s veggies (and their open-minded carnivorous friends) they’re retooling for a different challenge.  
 					</p>
 					<p>  
 						Temporarily closing all of its stores, the Mildreds team are now putting all their efforts into providing 400 meals a week to 4 London hospitals. They’re providing the recipes, cooking and delivery but need help to make the operation sustainable.  Be a true local hero by donating below.
