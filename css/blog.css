@@ -2,3 +2,15 @@
 	background-size: cover;
 	background-color: grey;
 }
+
+.restaurant-card {
+	margin-top: 15px;
+}
+
+.restaurant-img {
+	max-width: 70%
+}
+
+.author {
+	font-size: 70%
+}
