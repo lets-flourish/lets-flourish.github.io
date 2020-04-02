@@ -268,6 +268,18 @@ have a lovely day
   min-width: 140px;
   max-width: 100%;
   height: auto;
+  padding-bottom: 15px;
+}
+
+.business-description {
+  max-width: 400px; /* THIS IS THE MAX WIDTH OF THE IMAGES */
+}
+
+/* width > 768px */
+@media screen and (max-width: 768px) {
+  .business-description {
+    margin: 0 auto;
+  }
 }
 
 .collapsing {

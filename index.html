@@ -37,17 +37,17 @@ title: The Flourish List
           </div>
 
           <div class="col-md-6 ">
-            <div>
+            <div class="business-description">
               <h3>
                 <a href="{{ business.link }} " class="name" >{{business.name}}</a>
               </h3>
-              <p style="margin-top: -14px;">
+              <p>
                 {% assign postcode_split = business.postcode | split:" " %}
                 {% assign first_half_postcode = postcode_split.first %}
                 {{business.type}} in {{business.area}}
               </p>
 
-              <div style="margin-bottom: 10px; margin-top: -12px;">
+              <div style="margin-bottom: 10px">
               {% if business.type != "Brewery" and business.type != "Wine" %}
                 {% assign food = "Food 🍝"%}
                 <span class="offering-item">{{food}}</span>
@@ -68,32 +68,28 @@ title: The Flourish List
                 {% assign nhsdonations = "NHS Donations 👩🏽‍⚕️" %}
                 <span class="offering-item">{{nhsdonations}}</span>
               {% endif %}
-            </div>
-            </div>
+              </div>
 
-
-            {% if business.takeaway_link != "n/a" %}
+              {% if business.takeaway_link != "n/a" %}
               <p class="services-list">
                 <i class="far fa-check-circle" style="color:#048b03;"></i> Takeaway available
               </p>
-            {% endif %}
+              {% endif %}
 
-
-            {% if business.delivery_link != "n/a" %}
+              {% if business.delivery_link != "n/a" %}
               <p class="services-list">
                 <i class="far fa-check-circle" style="color:#048b03;"></i> Delivery available
               </p>
-            {% endif %}
+              {% endif %}
 
-
-            {% if business.nhs_donations_available == "TRUE" %}
-            <p class="services-list">
-              <i class="far fa-check-circle" style="color:#005EB8;"></i> NHS Donations &mdash;
-              <a target="_blank " href="{{ business.nhs_donations_link }}" style="color:#005EB8">
-                Donate now
-              </a>
-            </p>
-            {% elsif business.voucher_text != "n/a" or business.flourish_link != "n/a" %}
+              {% if business.nhs_donations_available == "TRUE" %}
+              <p class="services-list">
+                <i class="far fa-check-circle" style="color:#005EB8;"></i> NHS Donations &mdash;
+                <a target="_blank " href="{{ business.nhs_donations_link }}" style="color:#005EB8">
+                  Donate now
+                </a>
+              </p>
+              {% elsif business.voucher_text != "n/a" or business.flourish_link != "n/a" %}
               <p class="services-list">
                 <i class="far fa-check-circle" style="color:#048b03;"></i> Vouchers available &mdash;
 
@@ -107,21 +103,22 @@ title: The Flourish List
                 </a>
                 {% endif %}
               </p>
-            {% endif %}
+              {% endif %}
 
-            {% if business.delivery_link != "n/a" %}
-            <a target="_blank " href="{{ business.delivery_link }}">
-              <button class="btn px-8 btn-order">
-                Order &rarr;
-              </button>
-            </a>
-            {% elsif business.takeaway_link != "n/a" %}
-            <a class=" " target="_blank " href="{{ business.takeaway_link }}">
-              <button class="btn px-8 btn-order">
-                Order &rarr;
-              </button>
-            </a>
-            {% endif %}
+              {% if business.delivery_link != "n/a" %}
+              <a target="_blank " href="{{ business.delivery_link }}">
+                <button class="btn px-8 btn-order">
+                  Order &rarr;
+                </button>
+              </a>
+              {% elsif business.takeaway_link != "n/a" %}
+              <a class=" " target="_blank " href="{{ business.takeaway_link }}">
+                <button class="btn px-8 btn-order">
+                  Order &rarr;
+                </button>
+              </a>
+              {% endif %}
+            </div>
           </div>
         </div>
       </div>
