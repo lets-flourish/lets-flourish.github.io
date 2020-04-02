@@ -11,7 +11,7 @@ layout: blog
   </div>
 </div>
 <div class="container">
-	<div class="mb-3 mt-n3">
+<!-- 	<div class="mb-3 mt-n3">
 	<a class="btn" style="background-color: #3b5998; color:white;">
 	   <span class="fab fa-facebook-f"></span> 
 	 </a>
@@ -21,7 +21,7 @@ layout: blog
 	  <a class="btn" style="background-color: #2867B2; color:white;">
 	     <span class="fab fa-linkedin"></span> 
 	   </a>
-	</div>
+	</div> -->
 	<div class="row">
 	  <div class="col-md-12 ">
 			<p>
