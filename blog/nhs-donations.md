@@ -5,7 +5,7 @@ layout: blog
 
 <div class="jumbotron jumbotron-fluid hero-image pb-2" >
   <div class="container">
-    <h1 class="display-3">From set menus and wine lists to feeding the frontline</h1>
+    <h1 class="display-4">From set menus and wine lists to feeding the frontline</h1>
     <p class="lead">Our list of London restaurants retooling to feed the NHS and how you can help</p>
     <p class="author">Written by Alan Davies & Hamzah Chaudhary</p>
   </div>
