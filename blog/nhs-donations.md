@@ -35,7 +35,7 @@ layout: blog
 				</div>
 			</div>
 		</div>	
-		<div class="col-md-4 mt-4 text-center">
+		<div class="col-md-4 mt-4 mb-4 text-center order-first order-md-2">
 			<img class="restaurant-img" src="https://res.cloudinary.com/flourish-market/image/upload/g_auto,f_auto,c_fill,ar_1:1,w_400/Mildreds_xijm0v.jpg" alt="mildreds-photo">
 		</div>
 	</div>
@@ -54,7 +54,7 @@ layout: blog
 				</div>
 			</div>
 		</div>	
-		<div class="col-md-4  mt-4 text-center">
+		<div class="col-md-4 mt-4 mb-4 text-center order-first order-md-2">
 			<img class="restaurant-img" src="https://res.cloudinary.com/flourish-market/image/upload/g_auto,f_auto,c_fill,ar_1:1,w_400/Berber_and_Q_ox1yvi.jpg" alt="berberandyou-photo">
 		</div>
 	</div>
@@ -73,7 +73,7 @@ layout: blog
 				</div>
 			</div>
 		</div>	
-		<div class="col-md-4  mt-4 text-center">
+		<div class="col-md-4 mt-4 mb-4 text-center order-first order-md-2">
 			<img class="restaurant-img" src="https://res.cloudinary.com/flourish-market/image/upload/g_auto,f_auto,c_fill,ar_1:1,w_400/Angelina_rgq6gk.jpg" alt="agenlina-photo">
 		</div>
 	</div>
@@ -92,7 +92,7 @@ layout: blog
 				</div>
 			</div>
 		</div>	
-		<div class="col-md-4 mt-4 text-center">
+		<div class="col-md-4 mt-4 mb-4 text-center order-first order-md-2">
 			<img class="restaurant-img" src="https://res.cloudinary.com/flourish-market/image/upload/g_auto,f_auto,c_fill,ar_1:1,w_400/Feed_Our_Frontline_k5ekrs.jpg" alt="feedourfrontline-photo">
 		</div>
 	</div>
