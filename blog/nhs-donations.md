@@ -65,7 +65,7 @@ layout: blog
 				</div>
 			</div>
 		</div>	
-		<div class="col-md-4 mt-1 mt-md-5 mb-4text-center order-first order-md-2">
+		<div class="col-md-4 mt-1 mt-md-5 mb-4 text-center order-first order-md-2">
 			<img class="restaurant-img" src="https://res.cloudinary.com/flourish-market/image/upload/g_auto,f_auto,c_fill,ar_1:1,w_400/Berber_and_Q_ox1yvi.jpg" alt="berberandyou-photo">
 		</div>
 	</div>
