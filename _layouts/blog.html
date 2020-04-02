@@ -2,21 +2,28 @@
 <html>
 <head>
 	<title></title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="/css/list.css">
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+	<!-- <link rel="stylesheet" type="text/css" href="/css/list.css"> -->
 	<link rel="stylesheet" type="text/css" href="/css/blog.css">
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
 </head>
+{% include list-head.html %}
+
 <body>
 
-	<div class="container">
 
-	<!-- {% include site-nav.html %} -->
-	<h1>Blog</h1>
+	{% include site-nav.html %}
 	
 	{{ content }}
 	
-	</div>
 
-	<!-- {% include site-footer.md %} -->
+	{% include site-footer.md %}
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="/js/jquery.nice-select.min.js" async></script>
+<script src="../js/list.js"></script>
+
 </body>
 </html>
