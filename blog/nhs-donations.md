@@ -124,15 +124,15 @@ layout: blog
 		<img class="mb-4 restaurant-img" src="https://res.cloudinary.com/flourish-market/image/upload/g_auto,f_auto,c_fill,ar_1:1,w_400/Yard_Sale_Pizza_bub2bq.jpg" alt="yardsalepizzadsale-photo">
 	</div>
 	<div class="mb-4 text-center">
-	<a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//thelist.letsflourish.co/blog/nhs-donations" class="btn" style="background-color: #3b5998; color:white;">
-	   <span class="fab fa-facebook-f"></span> Share
-	 </a>
-	 <a class="btn" style="background-color: #1DA1F2; color:white;" href="https://twitter.com/intent/tweet?text=Check%20out%20this%20guide%20of%20London%20restaurants%20that%20are%20supporting%20the%20NHS!%20%23clapforourcarers%20https%3A//thelist.letsflourish.co/blog/nhs-donations">
-	    <span class="fab fa-twitter"></span> Tweet
-	  </a>
-	  <a class="btn" style="background-color: #2867B2; color:white;" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//thelist.letsflourish.co/blog/nhs-donations&title=Restaurants%20in%20London%20supporting%20the%20NHS&summary=&source=">
-	     <span class="fab fa-linkedin"></span> Share
-	   </a>
+		<a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//thelist.letsflourish.co/blog/nhs-donations" class="btn" style="background-color: #3b5998; color:white;">
+		   <span class="fab fa-facebook-f"></span> Share
+		</a>
+		<a class="btn" style="background-color: #1DA1F2; color:white;" href="https://twitter.com/intent/tweet?text=Check%20out%20this%20guide%20of%20London%20restaurants%20that%20are%20supporting%20the%20NHS!%20%23clapforourcarers%20https%3A//thelist.letsflourish.co/blog/nhs-donations">
+		    <span class="fab fa-twitter"></span> Tweet
+		</a>
+		<a class="btn" style="background-color: #2867B2; color:white;" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//thelist.letsflourish.co/blog/nhs-donations&title=Restaurants%20in%20London%20supporting%20the%20NHS&summary=&source=">
+			<span class="fab fa-linkedin"></span> Share
+		</a>
 	</div>
 </div>
 
