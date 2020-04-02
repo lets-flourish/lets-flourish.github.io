@@ -121,7 +121,7 @@ layout: blog
 	</div>
 	<div class="text-center mt-4">
 		<p>We'll keep updating this post and if you think there's somewhere we should add, get in touch at hello@letsflourish.co and let us know. Let's keep our NHS well fed and supported together!</p>
-		<img class="mb-4" src="https://res.cloudinary.com/flourish-market/image/upload/g_auto,f_auto,c_fill,ar_1:1,w_400/Yard_Sale_Pizza_bub2bq.jpg" alt="yardsalepizzadsale-photo">
+		<img class="mb-4 restaurant-img" src="https://res.cloudinary.com/flourish-market/image/upload/g_auto,f_auto,c_fill,ar_1:1,w_400/Yard_Sale_Pizza_bub2bq.jpg" alt="yardsalepizzadsale-photo">
 	</div>
 </div>
 
