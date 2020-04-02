@@ -318,9 +318,10 @@ a:hover, a:focus {
 }
 
 .offering-item {
+  display: inline-block;
   padding: 5px;
   padding-left: 7px;
-  margin-bottom: 0px;
+  margin-bottom: 6px;
   margin-right: 8px;
   background-color: #f5e5e1;
   font-size: 80%;
