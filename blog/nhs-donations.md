@@ -11,12 +11,23 @@ layout: blog
   </div>
 </div>
 <div class="container">
+	<div class="mb-3 mt-n3">
+	<a class="btn" style="background-color: #3b5998; color:white;">
+	   <span class="fab fa-facebook-f"></span> 
+	 </a>
+	 <a class="btn" style="background-color: #1DA1F2; color:white;">
+	    <span class="fab fa-twitter"></span> 
+	  </a>
+	  <a class="btn" style="background-color: #2867B2; color:white;">
+	     <span class="fab fa-linkedin"></span> 
+	   </a>
+	</div>
 	<div class="row">
 	  <div class="col-md-12 ">
 			<p>
-				The COVID-19 lockdown has changed the landscape of the food and drink industry overnight. Restaurants are having to adapt to stay afloat and support their workers while closing their physical doors to the public. Nevertheless, the biggest burden is being felt by our NHS and other essential services, who are tasked with keeping us safe and healthy during this unprecedented time. The Flourish team have been amazed by the number of independent restaurants that have set aside their profit margins to help support key workers on the frontline of the health crisis.
+				The COVID-19 lockdown has changed the landscape of the food and drink industry overnight. Restaurants are having to adapt to stay afloat and support their workers while closing their physical doors to the public. Nevertheless, the biggest burden is being felt by our NHS and other essential services, who are tasked with keeping us safe and healthy during this unprecedented time. 
 			</p>
-			<p>Read on for how you can contribute to help feed and support our NHS #stayathomesavelives</p>
+			<p> The Flourish team have been amazed by the number of independent restaurants that have set aside their profit margins to help support key workers on the frontline of the health crisis. Read on for how you can contribute to help feed and support our NHS #stayathomesavelives</p>
 	  </div>
 	</div>
 	<h2>Restaurants cooking for the NHS</h2>
@@ -35,7 +46,7 @@ layout: blog
 				</div>
 			</div>
 		</div>	
-		<div class="col-md-4 mt-4 mb-4 text-center order-first order-md-2">
+		<div class="col-md-4 mt-1 mt-md-5 mb-4 text-center order-first order-md-2">
 			<img class="restaurant-img" src="https://res.cloudinary.com/flourish-market/image/upload/g_auto,f_auto,c_fill,ar_1:1,w_400/Mildreds_xijm0v.jpg" alt="mildreds-photo">
 		</div>
 	</div>
@@ -54,7 +65,7 @@ layout: blog
 				</div>
 			</div>
 		</div>	
-		<div class="col-md-4 mt-4 mb-4 text-center order-first order-md-2">
+		<div class="col-md-4 mt-1 mt-md-5 mb-4text-center order-first order-md-2">
 			<img class="restaurant-img" src="https://res.cloudinary.com/flourish-market/image/upload/g_auto,f_auto,c_fill,ar_1:1,w_400/Berber_and_Q_ox1yvi.jpg" alt="berberandyou-photo">
 		</div>
 	</div>
@@ -73,7 +84,7 @@ layout: blog
 				</div>
 			</div>
 		</div>	
-		<div class="col-md-4 mt-4 mb-4 text-center order-first order-md-2">
+		<div class="col-md-4 mt-1 mt-md-5 mb-4 text-center order-first order-md-2">
 			<img class="restaurant-img" src="https://res.cloudinary.com/flourish-market/image/upload/g_auto,f_auto,c_fill,ar_1:1,w_400/Angelina_rgq6gk.jpg" alt="agenlina-photo">
 		</div>
 	</div>
@@ -86,13 +97,13 @@ layout: blog
 						Whilst our mission at Flourish is focused around publicising and supporting independent businesses, we wanted to include a feature on a nationwide charitable effort to keep our key workers fed.
 					</p>
 					<p>
-						The Feed Our Frontline campaign, which is  led by high-street restaurant LEON.,has set itself the heady goal of providing 6,000 meals a day for critical care staff in our NHS hospitals across the country. The FoF campaign is being supported by a range of partners across the food industry including some of London’s favourites including Rosa’s Thai, Mr Bao and Dishoom.  Along with food donations and free delivery services, the campaign is looking to the public for support and has already raised half of its initial £1million target.
+						Feed Our Frontline, which is  led by high-street restaurant LEON, has set itself the heady goal of providing 6,000 meals a day for critical care staff in our NHS hospitals across the country. The FoF campaign is being supported by a range of partners across the food industry including some of London’s favourites including Rosa’s Thai, Mr Bao and Dishoom.  Along with food donations and free delivery services, the campaign is looking to the public for support and has already raised half of its initial £1million target.
 					</p>
 					<a href="https://justgiving.com/crowdfunding/FeedNHS">Donate on their JustGiving page</a>
 				</div>
 			</div>
 		</div>	
-		<div class="col-md-4 mt-4 mb-4 text-center order-first order-md-2">
+		<div class="col-md-4 mt-1 mt-md-5 mb-4 text-center order-first order-md-2">
 			<img class="restaurant-img" src="https://res.cloudinary.com/flourish-market/image/upload/g_auto,f_auto,c_fill,ar_1:1,w_400/Feed_Our_Frontline_k5ekrs.jpg" alt="feedourfrontline-photo">
 		</div>
 	</div>
@@ -109,7 +120,7 @@ layout: blog
 			<a href="https://shop.wearelumberjack.co.uk/collections/buy-a-meal-for-an-nhs-worker">Buy an NHS worker a meal</a>
 			<h5  class="mt-4">Crosstown Doughnuts</h5>
 			<p>
-				The arrival of that signature black box of Crosstown Doughnuts is enough to make even the most hardworking of offices (home offices for now!) grind to a halt. Now they’re allowing you to order doughnuts to be sent to hospitals so our NHS heroes can enjoy one of their delicious round treats.
+				The arrival of that signature black box of Crosstown Doughnuts is enough to make even the most hardworking of offices (home offices for now!) grind to a halt. Now you can order heavily discounted doughnuts to be sent to hospitals so our NHS heroes can enjoy one of their delicious round treats.
 			</p>
 			<a href="https://www.crosstowndoughnuts.com/doughnut-donation/">Make a Doughnut Donation</a>
 			<h5 class="mt-4">Yard Sale Pizza</h5>
