@@ -1,0 +1,10 @@
+{
+  "regular_menu_available": true,
+  "meal_kits_available": true,
+  "groceries_available": true,
+  "alcohol_available": true,
+  "delivery_available": true,
+  "takeaway_available": true,
+  "voucher_available": true,
+  "nhs_donations_available": true
+}
