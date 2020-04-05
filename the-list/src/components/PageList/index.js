@@ -9,23 +9,28 @@ import ListFilterPanel from '../ListFilterPanel';
 
 import allPlaces from './places.json'
 import initialFilter from './initialFilter.json'
-import { Typography } from '@material-ui/core';
+import Box from '@material-ui/core/Box';
+import Typography from '@material-ui/core/Typography';
 
 const PageList = () => {
-  const [filter, setFilter] = useState(initialFilter);
+  // const [filter, setFilter] = useState(initialFilter);
   const [places, setPlaces] = useState(allPlaces.filter(p => p.publish === 'yes'));
 
   return (
-    <Container fixed>
+    <React.Fragment>
       <PageListHeader />
       <ListFilterPanel setPlaces={setPlaces} allPlaces={allPlaces}/>
-      <Typography variant="body1" align="center">
-        Showing {places.length} businesses
-      </Typography>
-      <Grid container spacing={2}>
+      <Box m={2}>
+        <Typography variant="body1" align="center">
+          Showing {places.length} businesses
+        </Typography>
+      </Box>
+      <Box m={2}>
+        <Container fluid>
         <PlacesList places={places} />
-      </Grid>
-    </Container>
+        </Container>
+      </Box>
+    </React.Fragment>
   )
 }
 

@@ -1,5 +1,4 @@
-import { createMuiTheme } from '@material-ui/core/styles';
-import red from '@material-ui/core/colors/red';
+import createMuiTheme from '@material-ui/core/styles/createMuiTheme';
 
 // Create a theme instance.
 const theme = createMuiTheme({
@@ -8,18 +7,27 @@ const theme = createMuiTheme({
       main: '#048b03',
     },
     secondary: {
-      main: '#19857b',
+      main: '#005EB8',
     },
-    error: {
-      main: red.A400,
-    },
+    // error: {
+    //   main: red.A400,
+    // },
     background: {
       default: '#fff',
     },
   },
-  shape: {
-    borderRadius: 2
+  typography: {
+    fontFamily: "'Nunito', 'Avenir Next Rounded', 'Avenir Next', sans-serif",
+    fontSize: 16,
+    fontWeightLight: 200,
+    fontWeightRegular: 400,
+    fontWeightMedium: 600,
+    fontWeightBold: 700,
   },
+  shape: {
+    borderRadius: 2,
+  },
+  spacing: 4,
 });
 
 export default theme;

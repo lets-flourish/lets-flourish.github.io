@@ -6,28 +6,18 @@ import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-  },
-  menuButton: {
-    marginRight: theme.spacing(2),
-  },
-  title: {
-    flexGrow: 1,
-  },
-}));
+import useStyles from './styles';
 
 const SiteNav = () => {
   const classes = useStyles();
 
   return (
-    <AppBar position="static">
+    <AppBar position="static" color="transparent" elevation={0}>
       <Toolbar>
-        <Typography variant="h6" className={classes.title}>
+        <Typography variant="h6" color="primary" className={classes.title}>
           THE FLOURISH LIST
         </Typography>
-        <IconButton edge="end" className={classes.menuButton} color="inherit" aria-label="menu">
+        <IconButton edge="end" className={classes.menuButton} color="primary" aria-label="menu">
           <MenuIcon />
         </IconButton>
       </Toolbar>
