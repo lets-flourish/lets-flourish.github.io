@@ -75,7 +75,7 @@ const PlaceListItem = ({place}) => {
       <Grid container spacing={8}>
         <Grid item xs={12} sm={12} md={1}></Grid>
         <Grid item xs={12} sm={4} md={4}>
-          <PlaceImg src={place.image}/>
+          <PlaceImg src={place.image} alt={place.name}/>
         </Grid>
         <Grid item xs={12} sm={8} md={6}>
           <Typography variant="h4" gutterBottom>{place.name}</Typography>
