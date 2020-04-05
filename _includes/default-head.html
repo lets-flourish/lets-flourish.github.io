@@ -13,9 +13,9 @@
 
 
 <!-- request css async so as not to block rendering: https://web.dev/defer-non-critical-css/ -->
-<link rel="preload" as="style" onload="this.onload=null;console.log(this);this.rel='stylesheet'" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
-<link rel="preload" as="style" onload="this.onload=null;console.log(this);this.rel='stylesheet'" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
-<link rel="preload" as="style" onload="this.onload=null;console.log(this);this.rel='stylesheet'" type="text/css" href="/css/nice-select.css">
+<link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+<link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+<link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" type="text/css" href="/css/nice-select.css">
 {% include preload-css-script.html %}
 
 <noscript>
