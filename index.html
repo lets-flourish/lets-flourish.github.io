@@ -48,6 +48,10 @@ title: The Flourish List
               </p>
 
               <div style="margin-bottom: 10px">
+              {% if business.prepared_food == "TRUE" %}
+                {% assign alcohol = "Ready to eat 🍔"%}
+                <span class="offering-item">{{alcohol}}</span>
+              {% endif %}
               {% if business.alcohol_available == "TRUE" %}
                 {% assign alcohol = "Drinks 🍷"%}
                 <span class="offering-item">{{alcohol}}</span>

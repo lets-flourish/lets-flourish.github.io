@@ -1,5 +1,10 @@
 [
   {
+    "UIString": "ready to eat", 
+    "filterBy": "prepared_food",
+    "buttonString": "ready to eat 🍔"
+  },
+  {
     "UIString": "buy a mealkit", 
     "filterBy": "meal_kits_available",
     "buttonString": "meal kits 👨🏻‍🍳"
@@ -13,16 +18,6 @@
     "UIString": "buy alcohol", 
     "filterBy": "alcohol_available",
     "buttonString": "alcohol🍷"
-  },
-  {
-    "UIString": "order delivery", 
-    "filterBy": "delivery_available",
-    "buttonString": "delivery 🛵"
-  },
-  {
-    "UIString": "buy food and drink to pickup", 
-    "filterBy": "takeaway_available",
-    "buttonString": "takeaway 🥡"
   },
   {
     "UIString": "buy vouchers", 
