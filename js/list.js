@@ -22,6 +22,7 @@ const init = () => {
     // cta: "",
     postcodes: [],
     categories: {
+      "prepared_food": false,
       "delivery_available": false,
       "voucher_available": false,
       "meal_kits_available": false,
@@ -68,6 +69,7 @@ const init = () => {
  // filter.html
   function activeFilterControl(f) {
     let trueFilters = [];
+    console.log(f.categories);
     for (let filter in f.categories) {
       let id = "#" + filter
       if (f.categories[filter] === true) {
