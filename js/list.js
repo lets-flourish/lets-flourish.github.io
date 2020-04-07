@@ -120,7 +120,7 @@ const init = () => {
   $('#postcodeQuery').submit(ev => {
     ev.preventDefault();
     const postcode = $('#query')[0].value;
-    const radius = 1.5 // km
+    const radius = 3.0 // km
     if (postcode.length === 0) return;
     $('#spinner').show();
     $('#searchError').hide();
