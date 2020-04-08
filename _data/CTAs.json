@@ -20,6 +20,11 @@
     "buttonString": "alcohol🍷"
   },
   {
+    "UIString": "ready to eat", 
+    "filterBy": "vegan_options",
+    "buttonString": "vegan 🥑"
+  },
+  {
     "UIString": "buy vouchers", 
     "filterBy": "voucher_available",
     "buttonString": "vouchers 🎫"
