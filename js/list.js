@@ -29,7 +29,8 @@ const init = () => {
       "groceries_available": false,
       "alcohol_available": false,
       "nhs_donations_available": false,
-      "takeaway_available": false
+      "takeaway_available": false,
+      "vegan_options": false
     }
   })
   let currentFilter = JSON.parse(initialFilter);
@@ -112,6 +113,11 @@ const init = () => {
       if (!filtersEnabled) {
         $('[data-filter-by="all"]').addClass('active');
       }
+    }
+
+    // show the vegan callout if they click vegan
+    if (filterBy === 'vegan_options') {
+      $('.vegan-callout').show();
     }
     
     activeFilterControl(currentFilter);
