@@ -328,6 +328,18 @@ a:hover, a:focus {
   font-weight: bolder;
 }
 
+.vegan-callout {
+  display: none;
+  margin-top: 5px;
+  background: rgba(4, 139, 3, 0.2);
+  border-radius: 2px;
+  padding: 8px;
+}
+
+.vegan-callout p {
+  margin: 0;
+}
+
 #stickyfilter {
   position: sticky;
   max-width: 100%;
